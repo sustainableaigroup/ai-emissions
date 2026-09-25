@@ -7,7 +7,7 @@ report:
   title: "Closed AI Emissions Calculation"
   expansion: "Companion to the CLEER Technical Report"
   subtitle: "Converting CLEER accelerator energy into greenhouse gas emissions for enterprise use of closed AI models"
-  authors: ""
+  authors: "Boris Gamazaychikov, Nidhal Jegham, and Sasha Luccioni"
   version: "CAIEC-0926"
   date: "29 SEPTEMBER 2026"
   pdf-file: "CAIEC-0926.pdf"
