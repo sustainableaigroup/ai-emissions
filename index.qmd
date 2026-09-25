@@ -242,7 +242,26 @@ This document takes CLEER's per-token accelerator energy estimates as inputs wit
 
 ![Calculation chain from customer token activity to the reported greenhouse gas inventory footprint.](assets/fig-calculation-chain.svg){#fig-calculation-chain width=100%}
 
-The calculation distinguishes customer activity data, modelled accelerator energy, proxy and default factors, and calculated emissions. These categories are retained through the factor register and assurance process.
+The calculation begins with model- and token-specific serving accelerator energy, $E_{\mathrm{acc}}$, as defined in §4. For each accounting group $v$, allocated model-development energy is $E_{\mathrm{dev}}(v)=d(v)E_{\mathrm{acc}}(v)$. The two energy streams receive different facility uplifts:
+
+$$
+E_{\mathrm{fac}}(v)
+=E_{\mathrm{acc}}(v)\,h_v\,i\,p
++E_{\mathrm{dev}}(v)\,h_v\,p
+$$
+
+The idle factor $i$ applies only to serving; host uplift $h_v$ and PUE $p$ apply to both streams (§§5 and 9.5). The reported inventory emissions are:
+
+$$
+G_{\mathrm{reported}}
+=\sum_v\left[
+E_{\mathrm{fac}}(v)\,CI_v
++E_{\mathrm{fac}}(v)\,k_c
++\bigl(E_{\mathrm{acc}}(v)+E_{\mathrm{dev}}(v)\bigr)I_{\mathrm{emb},v}
+\right]
+$$
+
+These terms are, respectively, operational emissions (§6), data center construction (§8), and embodied IT (§7). The central values and the full calculation steps are given in §§1.3 and 10.1. Location-based and market-based results are calculated separately.
 
 ## 1.5 AI Terms in GHG Accounting Language
 
