@@ -503,3 +503,41 @@ main.content hr { border-color: var(--saig-mist); margin: 3rem 0; }
   .saig-cover-meta-card { grid-template-columns: 1fr; }
   .pdf-button { width: 100%; justify-content: center; }
 }
+
+.saig-cite { margin-top: .8rem; max-width: 42rem; }
+.saig-cite summary {
+  display: inline-flex;
+  cursor: pointer;
+  list-style: none;
+  padding: .78rem 1rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--saig-ocean);
+  box-shadow: 0 8px 22px rgba(0,0,0,.12);
+  font: 500 .80rem "DM Mono", monospace;
+}
+.saig-cite summary::-webkit-details-marker { display: none; }
+.saig-cite-panel {
+  margin-top: .75rem;
+  padding: 1.25rem;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(3,56,69,.14);
+  line-height: 1.5;
+}
+.saig-cite-panel pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f5f1e9;
+  font-size: .82rem;
+}
+.saig-cite-copy {
+  cursor: pointer;
+  border: 0;
+  border-radius: 999px;
+  padding: .55rem .85rem;
+  background: var(--saig-ocean);
+  color: #fff;
+  font: 500 .75rem "DM Mono", monospace;
+}
