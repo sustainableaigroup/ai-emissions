@@ -27,7 +27,7 @@ format:
 <div class="saig-cover">
   <div class="saig-cover-top">
     <div class="saig-logo-card">
-      <img src="assets/saig-logo.svg" alt="Sustainable AI Group">
+      <img src="assets/saig-logo.png" alt="Sustainable AI Group">
     </div>
     <div class="saig-kicker">{{< meta report.type >}}</div>
     <h1>{{< meta report.title >}}</h1>
@@ -83,7 +83,7 @@ format:
 
 #place(top + left, dx: 0.52in, dy: 0.66in)[
   #block(width: 3.48in, fill: white, radius: 11pt, inset: 12pt)[
-    #image("assets/saig-logo.svg", width: 2.96in)
+    #image("assets/saig-logo.png", width: 2.96in)
   ]
 ]
 
