@@ -1,15 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
-<title id="title">Worked-example emissions breakdown</title><desc id="desc">The 207.5 tonnes carbon dioxide equivalent inventory is 87.4 tonnes inference and 120.1 tonnes model development. The same total is 186.2 tonnes operational emissions, 18.1 tonnes embodied IT, and 3.2 tonnes data center construction.</desc>
-<rect width="1200" height="500" rx="24" fill="#f7f5ef"/>
-<text x="48" y="58" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#033845">Worked example · 207.5 tCO₂e</text>
-<text x="48" y="90" font-family="Arial,sans-serif" font-size="17" fill="#4f747d">Two views of the same inventory total</text>
-<text x="48" y="149" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#033845">By accounting boundary</text>
-<rect x="48" y="172" width="460" height="72" rx="8" fill="#2b6572"/><rect x="508" y="172" width="632" height="72" rx="8" fill="#b8663b"/>
-<text x="72" y="217" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="white">Inference · 87.4</text><text x="530" y="217" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="white">Model development · 120.1</text>
-<text x="48" y="315" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#033845">By emissions source</text>
-<rect x="48" y="338" width="979" height="72" rx="8" fill="#2b6572"/><rect x="1027" y="338" width="95" height="72" fill="#b8663b"/><rect x="1122" y="338" width="18" height="72" fill="#c9b988"/>
-<text x="72" y="383" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="white">Operation · 186.2</text>
-<text x="927" y="448" font-family="Arial,sans-serif" font-size="16" fill="#033845">Embodied IT · 18.1</text><text x="927" y="472" font-family="Arial,sans-serif" font-size="16" fill="#6b6656">Construction · 3.2</text>
-<path d="M1075 411v20h-144" fill="none" stroke="#b8663b" stroke-width="2"/><path d="M1131 411v45h-184" fill="none" stroke="#8b875c" stroke-width="2"/>
-<text x="48" y="466" font-family="Arial,sans-serif" font-size="15" fill="#4f747d">Development is allocated across the source categories above; the rows should not be added together.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img" aria-labelledby="breakdown-title breakdown-desc">
+  <title id="breakdown-title">Worked example: 207.5 tonnes carbon dioxide equivalent</title>
+  <desc id="breakdown-desc">The inventory footprint is 207.5 tonnes carbon dioxide equivalent. By accounting boundary, inference is 87.4 tonnes and model development is 120.1 tonnes. By emissions source, operations are 186.2 tonnes, embodied IT is 18.1 tonnes, and data center construction is 3.2 tonnes. The two breakdowns are alternative views of the same total.</desc>
+  <defs>
+    <style>
+      .heading{font-family:Inter,Arial,sans-serif;font-weight:500;fill:#033845}
+      .body{font-family:'DM Sans',Arial,sans-serif;fill:#242424}
+      .mono{font-family:'DM Mono',Menlo,monospace;fill:#4F747D;letter-spacing:.6px}
+      .white{font-family:Inter,Arial,sans-serif;font-weight:500;fill:#FFFFFF}
+    </style>
+    <clipPath id="bar-one"><rect x="60" y="171" width="1080" height="72" rx="10"/></clipPath>
+    <clipPath id="bar-two"><rect x="60" y="348" width="1080" height="72" rx="10"/></clipPath>
+  </defs>
+  <rect width="1200" height="530" rx="22" fill="#F5F1E9"/>
+  <rect x="40" y="33" width="5" height="53" rx="2.5" fill="#B8663B"/>
+  <text x="61" y="58" class="heading" font-size="29">Worked example</text>
+  <text x="1140" y="58" text-anchor="end" class="heading" font-size="27">207.5 tCO₂e</text>
+  <text x="61" y="84" class="body" font-size="17">Two complementary views of the same inventory footprint</text>
+  <line x1="60" y1="106" x2="1140" y2="106" stroke="#C8D7DA" stroke-width="1"/>
+
+  <text x="60" y="143" class="heading" font-size="21">By accounting boundary</text>
+  <text x="1140" y="143" text-anchor="end" class="mono" font-size="13">87.4 + 120.1 = 207.5</text>
+  <g clip-path="url(#bar-one)">
+    <rect x="60" y="171" width="455" height="72" fill="#2B6572"/>
+    <rect x="515" y="171" width="625" height="72" fill="#B8663B"/>
+  </g>
+  <text x="81" y="214" class="white" font-size="22">Inference  ·  87.4</text>
+  <text x="537" y="214" class="white" font-size="22">Model development  ·  120.1</text>
+  <text x="60" y="272" class="mono" font-size="14">42% OF TOTAL</text>
+  <text x="1140" y="272" text-anchor="end" class="mono" font-size="14">58% OF TOTAL</text>
+
+  <text x="60" y="318" class="heading" font-size="21">By emissions source</text>
+  <text x="1140" y="318" text-anchor="end" class="mono" font-size="13">186.2 + 18.1 + 3.2 = 207.5</text>
+  <g clip-path="url(#bar-two)">
+    <rect x="60" y="348" width="969" height="72" fill="#2B6572"/>
+    <rect x="1029" y="348" width="94" height="72" fill="#B8663B"/>
+    <rect x="1123" y="348" width="17" height="72" fill="#55BAC0"/>
+  </g>
+  <text x="81" y="391" class="white" font-size="22">Operational emissions  ·  186.2</text>
+  <rect x="675" y="448" width="14" height="14" rx="2" fill="#B8663B"/>
+  <text x="700" y="461" class="body" font-size="17">Embodied IT  ·  18.1</text>
+  <rect x="935" y="448" width="14" height="14" rx="2" fill="#55BAC0"/>
+  <text x="960" y="461" class="body" font-size="17">Construction  ·  3.2</text>
+
+  <text x="60" y="495" class="body" font-size="15" fill="#4F747D">Model development is allocated across the emissions sources; the two bars should not be added together.</text>
 </svg>
