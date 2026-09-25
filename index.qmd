@@ -124,7 +124,7 @@ format:
 
 #outline(
   title: [Contents],
-  depth: 2,
+  depth: 1,
 )
 
 #pagebreak()
@@ -163,7 +163,7 @@ The existing sources span AI hardware measurements, life-cycle assessment, data 
 
 Existing frameworks establish which emissions to account for, but provide few of the numerical inputs needed to estimate them for closed models. This document quantifies each factor, identifies its source and assesses the likely direction of error. The resulting calculation can be reproduced from token counts through to reported emissions, with individual factors replaced as providers release better data.
 
-We note that AI emissions accounting remains an emerging field: serving architectures and provider disclosures evolve faster than the published research, and the evidence supporting some factors remains limited. We identify these limitations where they arise and will update the calculation as better data becomes available. All factor changes will be recorded in Annex F. Feedback, corrections and additional data are welcome through the public repository.
+We note that AI emissions accounting remains an emerging field: serving architectures and provider disclosures evolve faster than the published research, and the evidence supporting some factors remains limited. We identify these limitations where they arise and will update the calculation as better data becomes available. All factor changes will be recorded publicly. Feedback, corrections and additional data are welcome through the public repository.
 
 ## 1.1 Accounting Problem
 
@@ -983,6 +983,17 @@ The full benchmarking dataset is available to assurance providers and research r
 
 This annex identifies where the calculation aligns with, or differs from, published accounting and AI-sustainability frameworks. Differences reflect the accounting objective and data available to a corporate consumer of closed-model services, and are disclosed where they affect interpretation.
 
+For an enterprise purchaser of closed-model text services, this calculation is substantially aligned with the relevant accounting boundaries and adds explicit estimation steps where supplier data are unavailable. The assessment below concerns fitness for this use case and transparency of implementation; it does not rank the frameworks or establish the accuracy of proxy factors.
+
+| Framework | Relationship to this calculation | Added specificity or boundary distinction |
+| :--- | :--- | :--- |
+| GHG Protocol Scope 3 and ICT Sector Guidance | Consistent with accounting for purchased services, allocation of supplier emissions, and operational and embodied ICT emissions. | Converts model-level token activity into an inventory estimate using documented energy and carbon factors. This comparison does not assert formal conformance. |
+| ITU-T L.1801 | Shares a token-based functional unit, lifecycle components, and disclosed cut-off decisions. | Focuses on a corporate GHG inventory for purchased text services; L.1801 addresses the broader environmental life cycle of an AI system. |
+| GSF SCI for AI | The inference footprint overlaps its consumer-stage, per-token boundary and includes operational and embodied IT emissions. | The inventory footprint additionally allocates model development. That combined result is distinct from GSF's separate consumer and provider SCI scores. |
+| Watershed AI emissions framework | Closely aligns on activity-based estimation and coverage of inference, model development, data center overhead, and embodied hardware. | Adds CLEER estimates by named closed model, a cached-token treatment, and separate statistical and systematic uncertainty analyses. Provider measurements can replace modeled factors when available. |
+: Summary of alignment for corporate use of closed AI models. {#tbl-framework-summary}
+
+The detailed comparisons below retain the dimensions and boundary differences behind this assessment. [@ghgp_scope3; @ghgp_ict; @itu2026l1801; @gsf2025sciai; @watershed2026ai]
 
 ### GHG Protocol Scope 3 and ICT Sector Guidance
 
