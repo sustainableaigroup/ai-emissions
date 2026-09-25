@@ -1,0 +1,46 @@
+project:
+  type: default
+  output-dir: docs
+  resources:
+    - report-polish.js
+    - assets/SAIGFavicon.svg
+
+bibliography: references.bib
+reference-section-title: References
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    include-in-header: SAIGFavicon.html
+    include-after-body: report-polish.html
+    brand: brand-html.yml
+    theme: [brand, styles.scss]
+    toc: true
+    toc-location: left
+    toc-title: Contents
+    toc-depth: 2
+    smooth-scroll: true
+    citations-hover: true
+    footnotes-hover: true
+    anchor-sections: true
+    link-external-newwindow: true
+    fig-cap-location: bottom
+    code-fold: true
+    format-links: false
+
+  typst:
+    brand: _brand-pdf.yml
+    toc: false
+    papersize: us-letter
+    margin:
+      top: 0.72in
+      bottom: 0.72in
+      left: 0.62in
+      right: 0.62in
+    fontsize: 11pt
+    keep-typ: true
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    include-in-header: typst/saig-header.typ
