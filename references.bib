@@ -1,174 +1,587 @@
-@techreport{jiang2024mixtral,
-  author       = {Jiang, Albert Q. and Sablayrolles, Alexandre and Mensch, Arthur and Bamford, Chris and Chaplot, Devendra Singh and de las Casas, Diego and Bressand, Florian and Lengyel, Gianna and Lample, Guillaume and Saulnier, Lucile and Lavaud, Lélio and Lachaux, Marie-Anne and Stock, Pierre and Scao, Teven Le and Lavril, Thibaut and Wang, Thomas and Lacroix, Timothée and Sayed, William El},
-  title        = {Mixtral of Experts},
-  institution  = {Mistral AI},
-  year         = {2024},
-  note         = {arXiv:2401.04088}
+% references.bib — Closed AI Emissions Calculation (SAIG, Version 0926, September 2026)
+% Citation keys are retained for compatibility with the methodology source files.
+
+@misc{artificialanalysis2026pricing,
+  title        = {{AI} Model Pricing: Cache Hit, Input, and Output},
+  author       = {{Artificial Analysis}},
+  year         = {2026},
+  howpublished = {\url{https://artificialanalysis.ai/models#price-cost}},
+  note         = {Continuously updated; cache-read ratios calculated as cache-hit price divided by standard input price; accessed 9 September 2026}
 }
 
-@techreport{deepseekai2025deepseekv3technicalreport,
+@online{spheron2026inference,
+  author       = {{Spheron Network}},
+  title        = {AI Inference Cost Economics in 2026: GPU FinOps Playbook},
+  year         = {2026},
+  url          = {https://www.spheron.network/blog/ai-inference-cost-economics-2026/},
+  urldate      = {2026-09-22},
+  note         = {Spheron Network Blog. Vendor publication; not peer-reviewed}
+}
+
+@misc{ghgprotocol2015scope2,
+  author       = {{Greenhouse Gas Protocol}},
+  title        = {Scope 2 Guidance: An Amendment to the GHG Protocol Corporate Standard},
+  year         = {2015},
+  howpublished = {World Resources Institute and World Business Council for Sustainable Development},
+  url          = {https://ghgprotocol.org/scope-2-guidance}
+}
+
+@misc{holbrook2026behindthemeter,
+  author       = {Ellie Holbrook and Robert Boswall and Jeremie Eliahou Ontiveros and Nicolas Bontigui and Dylan Patel},
+  title        = {What is So Hard About Behind-The-Meter Power For Datacenters? Part 1: Dumb Science Experiments vs. Money Printing Machines},
+  year         = {2026},
+  month        = {sep},
+  day          = {10},
+  howpublished = {SemiAnalysis Newsletter},
+  url          = {https://newsletter.semianalysis.com/p/what-is-so-hard-about-behind-the}
+}
+
+@misc{openai2026tokens,
+  title        = {Understanding and Counting Tokens},
+  author       = {{OpenAI}},
+  year         = {2026},
+  howpublished = {\url{https://help.openai.com/en/articles/4936856-what-are-tokens-}},
+  note         = {States that one token corresponds to approximately four characters of English text; accessed 9 September 2026}
+}
+
+@inbook{ipcc2021ar6ch7,
+  author       = {Forster, P. and Storelvmo, T. and Armour, K. and Collins, W. and Dufresne, J.-L. and Frame, D. and Lunt, D. J. and Mauritsen, T. and Palmer, M. D. and Watanabe, M. and Wild, M. and Zhang, H.},
+  title        = {The Earth’s Energy Budget, Climate Feedbacks, and Climate Sensitivity},
+  booktitle    = {Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change},
+  editor       = {Masson-Delmotte, V. and Zhai, P. and Pirani, A. and Connors, S. L. and Péan, C. and Berger, S. and Caud, N. and Chen, Y. and Goldfarb, L. and Gomis, M. I. and Huang, M. and Leitzell, K. and Lonnoy, E. and Matthews, J. B. R. and Maycock, T. K. and Waterfield, T. and Yelekçi, O. and Yu, R. and Zhou, B.},
+  publisher    = {Cambridge University Press},
+  address      = {Cambridge, United Kingdom and New York, NY, USA},
+  year         = {2021},
+  pages        = {923--1054},
+  chapter      = {7},
+  note         = {Table 7.15},
+  doi          = {10.1017/9781009157896.009}
+}
+
+@techreport{ghgprotocol_gwp,
+  author       = {{World Resources Institute} and {World Business Council for Sustainable Development}},
+  title        = {Global Warming Potential Values},
+  institution  = {GHG Protocol},
+  type         = {Standard Guidance},
+  year         = {2015},
+  url          = {https://ghgprotocol.org/sites/default/files/ghgp/Global-Warming-Potential-Values%20%28Feb%2016%202015%29_1.pdf},
+  note         = {Required metrics for corporate and national greenhouse gas accounting}
+}
+
+@misc{anthropic2026glossary,
+  title        = {Glossary},
+  author       = {{Anthropic}},
+  year         = {2026},
+  howpublished = {\url{https://docs.anthropic.com/en/docs/resources/glossary}},
+  note         = {States that one Claude token corresponds to approximately 3.5 English characters; accessed 9 September 2026}
+}
+
+@online{greencoding2026co2formulas,
+  title        = {CO2 Formulas},
+  author       = {Green Coding IO},
+  url          = {https://www.green-coding.io/co2-formulas/},
+  year         = {2026},
+  note         = {Extrapolated 2025 network transmission intensity (0.04106 kWh/GB) from Coroamă (2021) Energy Intensity Model, WAN+FAN+RAN segments, 90% fixed / 10% mobile weighting}
+}
+
+@techreport{google2025environmental,
+  title        = {Measuring the Environmental Impact of Delivering AI at Google Scale},
+  author       = {{Google}},
+  institution  = {Google},
+  year         = {2025},
+  url          = {https://services.google.com/fh/files/misc/measuring_the_environmental_impact_of_delivering_ai_at_google_scale.pdf},
+  note         = {First-party production fleet telemetry; per-prompt energy decomposition}
+}
+
+@article{jegham2025hungry,
+  title        = {How Hungry Is AI? Benchmarking Energy, Water and Carbon Footprint of {LLM} Inference},
+  author       = {Jegham, Nidhal and Abdelatti, Marwan and Elmoubarki, Lassad and Hendawi, Abdeltawab},
+  journal      = {Communications of the ACM},
+  year         = {2025},
+  note         = {Accepted; peer-reviewed. Latency-based estimation structure extended by CLEER}
+}
+
+@misc{artificialanalysis,
+  title        = {Artificial Analysis: Independent Analysis of {AI} Models and Hosting Providers},
+  author       = {{Artificial Analysis}},
+  year         = {2026},
+  howpublished = {\url{https://artificialanalysis.ai/}},
+  note         = {Continuously updated; percentile throughput and time-to-first-token anchors}
+}
+
+@techreport{deepseek2024v3,
+  title        = {{DeepSeek-V3} Technical Report and Inference System Deployment Report},
   author       = {{DeepSeek-AI}},
-  title        = {DeepSeek-V3 Technical Report},
-  institution  = {DeepSeek-AI},
+  year         = {2024},
+  institution  = {DeepSeek},
+  url          = {https://arxiv.org/abs/2412.19437}
+}
+
+@inproceedings{strubell2019energy,
+  title        = {Energy and Policy Considerations for Deep Learning in {NLP}},
+  author       = {Strubell, Emma and Ganesh, Ananya and McCallum, Andrew},
+  booktitle    = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  year         = {2019},
+  url          = {https://arxiv.org/abs/1906.02243}
+}
+
+@inproceedings{luccioni2024power,
+  title        = {Power Hungry Processing: Watts Driving the Cost of {AI} Deployment?},
+  author       = {Luccioni, Alexandra Sasha and Jernite, Yacine and Strubell, Emma},
+  booktitle    = {Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT)},
+  year         = {2024},
+  url          = {https://arxiv.org/abs/2311.16863}
+}
+
+@article{latif2025empirical,
+  title        = {Single-Node Power Demand During {AI} Training: Measurements on an 8-{GPU} {NVIDIA} {H100} System},
+  author       = {Latif, Imran and Newkirk, Alex C. and Carbone, Matthew R. and Munir, Arslan and Lin, Yuewei and Koomey, Jonathan and Yu, Xi and Dong, Zhihua},
+  journal      = {IEEE Access},
+  volume       = {13},
+  pages        = {61740--61747},
   year         = {2025},
-  note         = {arXiv:2412.19437}
+  doi          = {10.1109/ACCESS.2025.3554728},
+  url          = {https://doi.org/10.1109/ACCESS.2025.3554728},
+  note         = {Metered node power under active load; non-accelerator multiplier 1.41--1.50}
 }
 
-@techreport{yang2025qwen3technicalreport,
-  author       = {Yang, An and Yang, Baosong and Hui, Binyuan and Zheng, Bo and Yu, Bowen and Zhou, Chang and Li, Chengpeng and Li, Chengyuan and Liu, Dayiheng and Huang, Fei and Dong, Guanting and Wei, Haoran and Lin, Huan and Yang, Jialong and Zeng, Jialin and Zhang, Jianwei and Liu, Jianxin and Yang, Jin Xu and Li, Junyang and Qiu, Kai and Lu, Keming and Chen, Keqing and Yang, Min and Li, Mei and Zhang, Peiyang and Zhou, Peng and Gu, Rui and Meng, Ruirui and Tan, Sinan and Zhang, Tianhao and Yu, Tianyu and Liu, Wei and Lin, Junyang and Yang, Fan},
-  title        = {Qwen3 Technical Report},
-  institution  = {Alibaba Group},
+@misc{epoch2025gb200,
+  title        = {{GB200} Reference Architecture: Server and Rack Power Accounting},
+  author       = {{Epoch AI}},
   year         = {2025},
-  note         = {arXiv:2501.12345}
+  howpublished = {\url{https://epoch.ai/}},
+  note         = {Spec-derived host uplift corroboration and networking term}
 }
 
-@techreport{gemmateam2026gemma4technicalreport,
-  author       = {{Gemma Team}},
-  title        = {Gemma 4 Technical Report},
-  institution  = {Google DeepMind},
-  year         = {2026}
+@misc{microsoft2025gb200rack,
+  title        = {Power Stabilization for {AI} Training Datacenters},
+  author       = {Choukse, Esha and others},
+  year         = {2025},
+  eprint       = {2508.14318},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.AR},
+  url          = {https://arxiv.org/abs/2508.14318},
+  note         = {Collaboration among Microsoft, OpenAI and NVIDIA; GPUs exceed 50\% of provisioned server power in the reported GB200 breakdown}
 }
 
-@article{delavande2026,
-  author       = {Delavande, Pierre and Rivoire, Suzanne and Kozyrakis, Christos},
-  title        = {Characterizing Prefill and Decode Phases in Large Language Model Serving},
-  journal      = {ACM Transactions on Computer Systems},
-  volume       = {44},
-  number       = {1},
-  pages        = {12--28},
-  year         = {2026}
+@misc{mlenergy,
+  title        = {The {ML.ENERGY} Benchmark},
+  author       = {Chung, Jae-Won and others},
+  year         = {2025},
+  howpublished = {\url{https://ml.energy/leaderboard}},
+  note         = {46 models, 1,858 serving configurations, NVML-metered}
 }
 
-@techreport{zuo2025servinglargelanguagemodels,
-  author       = {Zuo, Yuxuan and Zhang, Yitong and Zhao, Chenggang and Liu, Haowei and Gao, Ling and Shao, Wenfeng and Wu, Zheng and Li, Guokun},
-  title        = {Serving Large Language Models at Scale: DeepSeek V3 Deployment Architecture},
-  institution  = {DeepSeek-AI},
-  year         = {2025}
+@article{oviedo2026joule,
+  title        = {Energy Use of {AI} Inference, Efficiency Pathways, and Test-Time Scaling},
+  author       = {Oviedo, Felipe and Kazhamiaka, Fiodar and Choukse, Esha and Kim, Allen and Luers, Amy and Nakagawa, Melanie and Bianchini, Ricardo and Lavista Ferres, Juan M.},
+  journal      = {Joule},
+  year         = {2026},
+  pages        = {102430},
+  doi          = {10.1016/j.joule.2026.102430},
+  url          = {https://doi.org/10.1016/j.joule.2026.102430},
+  note         = {Bottom-up model of production-scale inference; includes distributions for utilization, networking and power usage effectiveness}
 }
 
-@techreport{qwen35,
-  author       = {{Qwen Team}},
-  title        = {Qwen3.5 Technical Report},
-  institution  = {Alibaba Group},
-  year         = {2026}
+@manual{nvidia_dgx_h100,
+  title        = {{NVIDIA} {DGX} {H100} System Specification},
+  organization = {NVIDIA},
+  year         = {2023},
+  url          = {https://www.nvidia.com/en-us/data-center/dgx-h100/}
 }
 
-@article{lai2026minimaxsparseattention,
-  author       = {Lai, Guokun and Tan, Xu and Zhang, Yifan and Wang, Yu},
-  title        = {MiniMax-M3: Sparse Attention Architecture for High-Throughput Inference},
-  journal      = {Journal of Machine Learning Research},
-  volume       = {27},
-  pages        = {1--34},
-  year         = {2026}
+@techreport{nvidia2025pcf,
+  title        = {{NVIDIA} {HGX} {H100} and {HGX} {B200} Product Carbon Footprint Reports},
+  author       = {{NVIDIA}},
+  institution  = {NVIDIA, critical review by WSP},
+  year         = {2025},
+  note         = {ISO 14067 conformant; over 90\% primary supplier data by weight},
+  url          = {https://images.nvidia.com/aem-dam/Solutions/documents/HGX-H100-PCF-Summary.pdf}
 }
 
-@techreport{5team2025glm45agenticreasoningcoding,
-  author       = {{GLM Team}},
-  title        = {GLM-4.7: Agentic Reasoning and Coding},
-  institution  = {Zhipu AI},
-  year         = {2025}
+@misc{schneider2025tpulca,
+  title        = {Life-Cycle Emissions of {AI} Hardware: A Cradle-to-Grave Approach and Generational Trends},
+  author       = {Schneider, Ian and others},
+  year         = {2025},
+  howpublished = {arXiv preprint},
+  url          = {https://arxiv.org/abs/2502.01671},
+  note         = {Table 1: per-TPU embodied emissions (TPU and host manufacturing plus transport, data center construction), measured mean power per machine and per TPU excluding host, over a 6-year life}
 }
 
-@techreport{glm5team2026glm5vibecodingagentic,
-  author       = {{GLM Team}},
-  title        = {GLM-5.2 Technical Report},
-  institution  = {Zhipu AI},
-  year         = {2026}
-}
-
-@techreport{qwen3technicalreport,
-  author       = {{Qwen Team}},
-  title        = {Qwen3 Technical Report},
-  institution  = {Alibaba Group},
-  year         = {2025}
-}
-
-@techreport{kimiteam2026kimik3openfrontier,
-  author       = {{Kimi Team}},
-  title        = {Kimi K3: Open Frontier Mixture-of-Experts Model},
-  institution  = {Moonshot AI},
-  year         = {2026}
-}
-
-@techreport{agarwal2025gpt,
-  author       = {Agarwal, Sandhini and Ahmad, Lama and Akkaya, Ilge and Aleman, Milena and Almeida, Diogo and Altenschmidt, Janko and Altman, Sam and Anadkat, Shyamal and Arons, Red and Astolfi, Amanda},
-  title        = {GPT-OSS-20B Model and Architecture Report},
-  institution  = {OpenAI},
-  year         = {2025}
-}
-
-@techreport{blackwell2024,
-  author       = {{NVIDIA Corporation}},
-  title        = {NVIDIA Blackwell Architecture Technical Whitepaper},
-  institution  = {NVIDIA},
-  year         = {2024}
-}
-
-@article{elsworth2025measuringenvironmentalimpactdelivering,
-  author       = {Elsworth, Ben and Fowkes, Jaroslav and Henderson, Peter and Patterson, David and Ranganathan, Parthasarathy and Jeffrey, Dean},
-  title        = {Measuring the Environmental Impact of Delivering AI at Scale},
-  journal      = {Nature Machine Intelligence},
-  volume       = {7},
-  pages        = {112--124},
-  year         = {2025}
-}
-
-@article{schneider2025lifecycleemissionsaihardware,
-  author       = {Schneider,
-                  Marcus and Gupta, Udit and Wu, Carole-Jean},
-  title        = {Lifecycle Carbon Emissions of AI Hardware Infrastructure},
+@article{jouppi2026micro,
+  title        = {Google's Training Supercomputers from {TPU} v2 to Ironwood: Architectural Stability, Scale, Resilience, Power Efficiency, and Sustainability Across Five Generations},
+  author       = {Jouppi, Norman P. and Lakshmanamurthy, Sridhar and Young, Cliff and Patterson, David A.},
   journal      = {IEEE Micro},
-  volume       = {45},
-  number       = {2},
-  pages        = {45--56},
-  year         = {2025}
+  volume       = {46},
+  number       = {4},
+  year         = {2026},
+  doi          = {10.1109/MM.2026.3699647},
+  eprint       = {2606.15870},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.AR},
+  url          = {https://doi.org/10.1109/MM.2026.3699647}
 }
 
-@article{jouppi2021ten,
-  author       = {Jouppi, Norman P. and Yoon, Doe Hyun and Kurian, George and Li, Sheng and Patil, Nishant and Ma, Jason and Young, Clifford and Patterson, David},
-  title        = {Ten Lessons From Three Generations of Google TPUs},
-  journal      = {IEEE Micro},
-  volume       = {41},
-  number       = {6},
-  pages        = {56--64},
-  year         = {2021}
+@misc{patterson2022goodnews,
+  author       = {Patterson, David and others},
+  title        = {Good News About the Carbon Footprint of Machine Learning Training},
+  year         = {2022},
+  month        = feb,
+  publisher    = {Google Research},
+  howpublished = {Google Research Blog},
+  url          = {https://research.google/blog/good-news-about-the-carbon-footprint-of-machine-learning-training/},
+  note         = {Accessed: 2026-09-16}
 }
 
-@techreport{gul2026energy,
-  author       = {Gul,
-                  Ahmet and Jouppi, Norman P. and Ranganathan, Parthasarathy},
-  title        = {Energy Efficiency Analysis of Google TPU v5e in Production Workloads},
-  institution  = {Google Cloud},
-  year         = {2026}
+@techreport{mistral2025lca,
+  title        = {Life Cycle Assessment of a Production {AI} Model},
+  author       = {{Mistral AI} and {Carbone 4} and {ADEME}},
+  institution  = {Mistral AI},
+  year         = {2025},
+  note         = {GHG Protocol Product Standard and ISO 14040/44 conformant},
+  url          = {https://carbone4.com/en/actualites/ia-generative-mission-mistral-ai}
 }
 
-@techreport{tpuVgpu2026,
-  author       = {Smith, Brian and Lee, David and Wang, Lisa},
-  title        = {TPU v6e Architecture and Performance Benchmarks},
-  institution  = {Google Cloud},
-  year         = {2026}
+@techreport{carbontrust2026video,
+  title        = {The Carbon Impact of {AI} Video Generation},
+  author       = {{Carbon Trust}},
+  institution  = {Carbon Trust},
+  year         = {2026},
+  note         = {Expert working group review; SAIG participated},
+  url          = {https://www.carbontrust.com/our-work-and-impact/guides-reports-and-tools/the-carbon-impact-of-ai-video-generation}
 }
 
-@article{sharma2025aiacceleratorslargelanguage,
-  author       = {Sharma, Rohit and Patel, Vikram and Chen, Kevin},
-  title        = {AI Accelerators for Large Language Models: Ironwood vs. Hopper Performance and Power Characterization},
-  journal      = {Computer Architecture Letters},
-  volume       = {24},
+@techreport{watershed2026ai,
+  title        = {An Open Framework for {AI} Emissions Measurement},
+  author       = {{Watershed}},
+  institution  = {Watershed},
+  year         = {2026},
+  month        = jul,
+  url          = {https://watershed.com/blog/ai-emissions-framework},
+  note         = {Published 22 July 2026. White paper: https://cdn.sanity.io/files/3ogo9b9g/production/a5c1f64ca5864e61b47e6384ee4d0ed31bc861f4.pdf. Default PUE of 1.45 cited as the average US value from LBNL (2024)}
+}
+
+@techreport{schneiderelectric2023wp99,
+  title        = {Quantifying Data Center Scope 3 {GHG} Emissions to Prioritize Reduction Efforts},
+  author       = {Lin, Paul and Bunger, Robert and Avelar, Victor},
+  institution  = {Schneider Electric},
+  type         = {White Paper},
+  number       = {99},
+  year         = {2023},
+  url          = {https://download.schneider-electric.com/files?p_Doc_Ref=SPD_WP99_EN&p_File_Name=WP99_V1_EN.pdf&p_enDocType=White+Paper}
+}
+
+@article{falk2025a100,
+  title        = {More than Carbon: Cradle-to-Grave Environmental Impacts of {GenAI} Training on the {NVIDIA} {A100} {GPU}},
+  author       = {Falk, Sophia and Ekchajzer, David and Pirson, Thibault and Lees-Perasso, Etienne and Wattiez, Augustin and Biber-Freudenberger, Lisa and Luccioni, Sasha and van Wynsberghe, Aimee},
+  journal      = {Environmental Impact Assessment Review},
+  volume       = {121},
+  pages        = {108525},
+  year         = {2026},
+  doi          = {10.1016/j.eiar.2026.108525},
+  url          = {https://doi.org/10.1016/j.eiar.2026.108525},
+  note         = {Primary teardown and elemental analysis; independent of NVIDIA}
+}
+
+@misc{li2025ecoserve,
+  title        = {{EcoServe}: Designing Carbon-Aware {AI} Inference Systems},
+  author       = {Li, Yueying and others},
+  year         = {2025},
+  howpublished = {arXiv preprint},
+  note         = {Cornell Tech, Azure Research and NVIDIA Research; bottom-up host-tray share},
+  url          = {https://arxiv.org/abs/2502.05043}
+}
+
+@techreport{ademe2026gpu,
+  title        = {Analyse de Cycle de Vie de {GPU} (Cartes Graphiques) pour l'Intelligence Artificielle},
+  author       = {Lees-Perasso, Etienne and Ekchajzer, David and Roussilhe, Gauthier and De Latour, Aur{\'e}lien},
+  institution  = {ADEME, Hubblo and Tide},
+  year         = {2026},
+  url          = {https://librairie.ademe.fr/economie-circulaire-et-dechets/9103-analyse-de-cycle-de-vie-de-gpu-cartes-graphiques-pour-l-intelligence-artificielle.html},
+  note         = {Eight cards dismantled; EIME with CODDE and NegaOctet}
+}
+
+@article{ostrouchov2020gpu,
+  title        = {{GPU} Lifetimes on {Titan} Supercomputer: Survival Analysis and Reliability},
+  author       = {Ostrouchov, George and Maxwell, Don and Ashraf, Rizwan A. and Engelmann, Christian and Shankar, Mallikarjun and Rogers, James H.},
+  journal      = {Proceedings of SC20: International Conference for High Performance Computing, Networking, Storage and Analysis},
+  year         = {2020},
+  note         = {ORNL; over 100,000 GPU-years},
+  url          = {https://sc20.supercomputing.org/proceedings/tech_paper/tech_paper_pages/pap537.html}
+}
+
+@misc{ecologits,
+  title        = {{EcoLogits}: Estimating the Environmental Impacts of Generative {AI}},
+  author       = {{GenAI Impact} and {Boavizta}},
+  year         = {2025},
+  howpublished = {\url{https://ecologits.ai/}},
+  note         = {Open-source bottom-up model}
+}
+
+@article{kim2026scoping,
+  title        = {Toward Sustainable {AI}: A Scoping Review of Carbon Footprint and Environmental Impacts Across Training and Inference Stages},
+  author       = {Kim, Min-Kyu and Yoo, Tae-An and Chung, Ji-Bum},
+  journal      = {IEEE Access},
+  volume       = {14},
+  pages        = {18881--18896},
+  year         = {2026},
+  doi          = {10.1109/ACCESS.2026.3659894},
+  url          = {https://doi.org/10.1109/ACCESS.2026.3659894},
+  note         = {Reviews boundary, functional-unit and disclosure inconsistencies across training and inference assessments}
+}
+
+@manual{itu2026l1801,
+  title        = {{ITU-T} {L}.1801: Guidelines for Assessing the Environmental Impact of Artificial Intelligence Systems},
+  organization = {International Telecommunication Union},
+  year         = {2026},
+  month        = feb,
+  url          = {https://www.itu.int/rec/T-REC-L.1801-202602-P},
+  note         = {Published Recommendation}
+}
+
+@misc{guidi2024datacenter,
+  title        = {Environmental Burden of {United States} Data Centers in the Artificial Intelligence Era},
+  author       = {Guidi, Gianluca and others},
+  year         = {2024},
+  eprint       = {2411.09786},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2411.09786},
+  note         = {2,132 facilities; grid intensity approximately 48\% above the national average}
+}
+
+@article{odonoughue2014harmonization,
+  title        = {Life Cycle Greenhouse Gas Emissions of Electricity Generated from Conventionally Produced Natural Gas: Systematic Review and Harmonization},
+  author       = {O'Donoughue, Patrick R. and Heath, Garvin A. and Dolan, Stacey L. and Vorum, Martin},
+  journal      = {Journal of Industrial Ecology},
+  volume       = {18},
   number       = {1},
-  pages        = {18--22},
-  year         = {2025}
+  pages        = {125--144},
+  year         = {2014},
+  doi          = {10.1111/jiec.12084},
+  url          = {https://doi.org/10.1111/jiec.12084}
 }
 
-@techreport{tpu6e,
-  author       = {{Google Cloud}},
-  title        = {TPU v6e (Trillium) Specification and Performance Overview},
-  institution  = {Google},
-  year         = {2025}
+@article{alvarez2018methane,
+  title        = {Assessment of Methane Emissions from the {U.S.} Oil and Gas Supply Chain},
+  author       = {Alvarez, Ramón A. and others},
+  journal      = {Science},
+  volume       = {361},
+  number       = {6398},
+  pages        = {186--188},
+  year         = {2018},
+  doi          = {10.1126/science.aar7204},
+  url          = {https://doi.org/10.1126/science.aar7204}
 }
 
-@techreport{tpu7,
-  author       = {{Google Cloud}},
-  title        = {Ironwood TPU Architecture Overview},
-  institution  = {Google},
-  year         = {2026}
+@article{zhang2020permian,
+  title        = {Quantifying Methane Emissions from the Largest Oil-Producing Basin in the {United States} from Space},
+  author       = {Zhang, Yuzhong and others},
+  journal      = {Science Advances},
+  volume       = {6},
+  number       = {17},
+  year         = {2020},
+  doi          = {10.1126/sciadv.aaz5120},
+  url          = {https://doi.org/10.1126/sciadv.aaz5120}
+}
+
+@misc{cleanview_tracker,
+  title        = {Data Center Air Pollution Tracker},
+  author       = {{Climate Power} and {Cleanview}},
+  year         = {2026},
+  howpublished = {\url{https://www.cleanview.co/}},
+  note         = {Behind-the-meter project counts and grid-connected intensity by provider}
+}
+
+@inproceedings{nibler2025storage,
+  title        = {Carbon Footprint of Storage in Data Centers: The Impact of Using {SSDs} for Key-Value Stores},
+  author       = {Nibler, Jakob and Ropars, Thomas},
+  booktitle    = {2025 IEEE 25th International Symposium on Cluster, Cloud and Internet Computing (CCGrid)},
+  pages        = {305--314},
+  year         = {2025},
+  doi          = {10.1109/CCGRID64434.2025.00064},
+  url          = {https://doi.org/10.1109/CCGRID64434.2025.00064}
+}
+
+@techreport{coroama2021network,
+  title        = {Investigating the Inconsistencies among Energy and Energy Intensity Estimates of the Internet},
+  author       = {Coroam{\u{a}}, Vlad C.},
+  institution  = {Swiss Federal Office of Energy (SFOE)},
+  year         = {2021},
+  note         = {Energy Intensity Model covering WAN, FAN and RAN segments}
+}
+
+@article{mytton2024network,
+  title        = {Network Energy Use Not Directly Proportional to Data Volume: The Power Model Approach for More Reliable Network Energy Consumption Calculations},
+  author       = {Mytton, David and Lund{\'e}n, Dennis and Malmodin, Jens},
+  journal      = {Journal of Industrial Ecology},
+  volume       = {28},
+  number       = {4},
+  pages        = {966--980},
+  year         = {2024},
+  doi          = {10.1111/jiec.13512},
+  url          = {https://doi.org/10.1111/jiec.13512},
+  note         = {Demonstrates that network energy use is not directly proportional to data volume}
+}
+
+@misc{cornerstone2026egrid,
+  title        = {Cornerstone Sustainability Data Initiative: {eGRID2024} (2026 Release), Market- and Location-Based},
+  author       = {{Cornerstone Sustainability Data Initiative}},
+  year         = {2026},
+  version      = {1.1},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.18968658},
+  url          = {https://doi.org/10.5281/zenodo.18968658},
+  note         = {Input snapshot of 12 March 2026; validation against eGRID2023 found discrepancies below 1\%}
+}
+
+@techreport{lbnl2024datacenter,
+  title        = {2024 {United States} Data Center Energy Usage Report},
+  author       = {Shehabi, Arman and others},
+  institution  = {Lawrence Berkeley National Laboratory},
+  year         = {2024},
+  url          = {https://eta.lbl.gov/publications/2024-united-states-data-center-energy}
+}
+
+@misc{epoch2026compute_expenses,
+  title        = {Compute Accounts for the Majority of Expenses of {AI} Companies},
+  author       = {{Epoch AI}},
+  year         = {2026},
+  howpublished = {\url{https://epoch.ai/data-insights/company-spending-breakdown}},
+  note         = {Anthropic 2025: \$4.1bn R\&D compute from press reporting; \$2.7bn inference compute implied by \$4.5bn revenue and 40\% gross margin}
+}
+
+@misc{epoch2026final_runs,
+  title        = {Final Training Runs Account for a Minority of {R\&D} Compute Spending},
+  author       = {{Epoch AI}},
+  year         = {2026},
+  howpublished = {\url{https://epoch.ai/gradient-updates/r-and-d-vs-training-compute}},
+  note         = {Final training runs at 9.6--22.6\% of development compute}
+}
+
+@misc{epoch2025openai_experiments,
+  title        = {Most of {OpenAI}'s 2024 Compute Went to Experiments},
+  author       = {{Epoch AI}},
+  year         = {2025},
+  howpublished = {\url{https://epoch.ai/data-insights/openai-compute-spend}}
+}
+
+@misc{semianalysis2026allocation,
+  title        = {Dylan Patel on {AI} Compute Allocation (Dwarkesh Podcast Interview)},
+  author       = {{SemiAnalysis}},
+  year         = {2026},
+  howpublished = {\url{https://www.dwarkesh.com/p/dylan-patel-3}},
+  note         = {Approximately 50\% research, 10\% final training, 40\% serving}
+}
+
+@article{bashir2026amortizing,
+  title        = {Amortizing {AI} Training Carbon Footprint: Challenges, Limitations and a Path Forward},
+  author       = {Bashir, Noman and others},
+  journal      = {ACM SIGENERGY Energy Informatics Review},
+  year         = {2026},
+  note         = {Amazon Science; corporate versus product standard treatment of amortization},
+  url          = {https://www.amazon.science/publications/amortizing-ai-training-carbon-footprint-challenges-limitations-and-a-path-forward}
+}
+
+@techreport{ghgp2026scope3revision,
+  title        = {Scope 3 Standard Revisions: Phase 1 Progress Update},
+  author       = {{GHG Protocol}},
+  institution  = {World Resources Institute and WBCSD},
+  year         = {2026},
+  month        = mar,
+  url          = {https://ghgprotocol.org/sites/default/files/2026-03/S3-Phase1ProgressUpdate-20260331.pdf},
+  note         = {Draft revision; not yet through public consultation}
+}
+
+@techreport{ghgp_scope3,
+  title        = {Corporate Value Chain (Scope 3) Accounting and Reporting Standard},
+  author       = {{GHG Protocol}},
+  institution  = {World Resources Institute and WBCSD},
+  year         = {2011},
+  note         = {Box 8.2 supplier allocation; physical over economic allocation},
+  url          = {https://ghgprotocol.org/corporate-value-chain-scope-3-standard}
+}
+
+@techreport{iea2025energyai,
+  title        = {Energy and {AI}},
+  author       = {{International Energy Agency}},
+  institution  = {IEA},
+  year         = {2025},
+  url          = {https://www.iea.org/reports/energy-and-ai}
+}
+
+@misc{saig2026cleer,
+  title        = {{CLEER}: Closed-model Latent Energy Estimation Range. Technical Report},
+  author       = {Jegham, Nidhal and Koh, Chan Young and Gamazaychikov, Boris and Luccioni, Sasha},
+  howpublished = {Sustainable AI Group},
+  year         = {2026},
+  month        = sep,
+  note         = {Version CLEER-Text-0926. URL to be added at publication}
+}
+
+@techreport{ghgp_ict,
+  title        = {{ICT} Sector Guidance Built on the {GHG} Protocol Product Life Cycle Accounting and Reporting Standard},
+  author       = {{GHG Protocol} and {Global e-Sustainability Initiative} and {Carbon Trust}},
+  institution  = {World Resources Institute and WBCSD},
+  year         = {2017},
+  url          = {https://ghgprotocol.org/sites/default/files/2023-03/GHGP-ICTSG%20-%20ALL%20Chapters.pdf}
+}
+
+@misc{gsf2025sciai,
+  title        = {Software Carbon Intensity for Artificial Intelligence ({SCI} for {AI})},
+  author       = {{Green Software Foundation}},
+  year         = {2025},
+  howpublished = {\url{https://greensoftware.foundation/standards/sci-ai/}},
+  note         = {Ratified December 2025; extends ISO/IEC 21031:2024. Defines provider and consumer scores}
+}
+
+@misc{uptime2024survey,
+  title        = {Uptime Institute Global Data Center Survey 2024},
+  author       = {{Uptime Institute}},
+  year         = {2024},
+  howpublished = {\url{https://uptimeinstitute.com/resources/research-and-reports/uptime-institute-global-data-center-survey-results-2024}},
+  note         = {Industry average PUE of 1.56}
+}
+
+@misc{argonne2025greet,
+  title        = {{GREET}: Greenhouse Gases, Regulated Emissions, and Energy Use in Technologies Model},
+  author       = {{Argonne National Laboratory}},
+  year         = {2025},
+  howpublished = {\url{https://greet.anl.gov/}},
+  note         = {Upstream fuel-cycle emission factors for coal, oil and natural gas}
+}
+
+@misc{epa_40cfr98_c1,
+  title        = {40 {CFR} Part 98, Subpart {C}, Table {C}-1: Default {CO2} Emission Factors and High Heat Values for Various Types of Fuel},
+  author       = {{US Environmental Protection Agency}},
+  year         = {2025},
+  howpublished = {\url{https://www.ecfr.gov/current/title-40/chapter-I/subchapter-C/part-98/subpart-C}}
+}
+
+@misc{epa_ap42,
+  title        = {{AP-42}: Compilation of Air Emissions Factors, Chapter 3: Stationary Internal Combustion Sources},
+  author       = {{US Environmental Protection Agency}},
+  year         = {2000},
+  howpublished = {\url{https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-compilation-air-emissions-factors-stationary-sources}},
+  note         = {Tables 3.1-2a (stationary gas turbines) and 3.2-2 (four-stroke lean-burn engines)}
+}
+
+@article{sherwin2024methane,
+  title        = {{US} Oil and Gas System Emissions from Nearly One Million Aerial Site Measurements},
+  author       = {Sherwin, Evan D. and others},
+  journal      = {Nature},
+  volume       = {627},
+  pages        = {328--334},
+  year         = {2024},
+  doi          = {10.1038/s41586-024-07117-5},
+  url          = {https://doi.org/10.1038/s41586-024-07117-5}
+}
+
+@techreport{jcgm2008gum101,
+  title        = {Evaluation of Measurement Data -- Supplement 1 to the ``Guide to the Expression of Uncertainty in Measurement'' -- Propagation of Distributions Using a {Monte Carlo} Method},
+  author       = {{Joint Committee for Guides in Metrology}},
+  institution  = {BIPM},
+  number       = {JCGM 101:2008},
+  year         = {2008},
+  url          = {https://www.bipm.org/en/committees/jc/jcgm/publications},
+  note         = {Probabilistically symmetric coverage intervals}
 }
