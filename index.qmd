@@ -846,7 +846,9 @@ Every such substitution is designed to be replaceable – provider disclosure of
 
 The calculation, activity estimates and registers are version-controlled together. The uncertainty treatment is reviewed whenever the CLEER intensity table or a Track 2 factor changes. It is also reviewed if model-coverage fallback exceeds 1% of reported emissions.
 
----
+```{=typst}
+#pagebreak()
+```
 
 # Annex A. Exclusion Evidence
 
@@ -897,7 +899,9 @@ The exclusion applies to GHG emissions only – end-of-life can be material for 
 | **Total quantified** | **0.71%** | **0.92%** |
 : Aggregate quantitative cut-off test, as a share of operational serving emissions. {#tbl-aggregate-quantitative-cut-off-test-as-a-share-of-oper}
 
----
+```{=typst}
+#pagebreak()
+```
 
 # Annex B. SAIG Benchmarking Data Summary Statistics
 
@@ -998,7 +1002,6 @@ The adopted GPU host factor of ×1.50 (§5.2) lies within the range at measured 
 
 The full benchmarking dataset is available to assurance providers and research reviewers on request, subject to a data-use agreement. It includes configuration-level power, throughput and latency by model, hardware, expert parallelism and batch size.
 
----
 
 ```{=typst}
 #pagebreak()
@@ -1072,7 +1075,9 @@ Sources: [@ghgp_scope3; @ghgp_ict; @itu2026l1801; @gsf2025sciai; @watershed2026a
 
 AFNOR Spec 2314 and ISO/IEC TR 20226:2025 provide informative guidance on AI environmental sustainability and were consulted, but do not specify accounting values at this level and are not compared here.
 
----
+```{=typst}
+#pagebreak()
+```
 
 # Annex D. Symbols and Units
 
@@ -1102,7 +1107,9 @@ Energy is expressed in kWh, emissions in kgCO₂e and power in W unless otherwis
 | I_emb | Embodied intensity, kgCO₂e/kWh of accelerator energy | 7, 10 |
 : Symbols and units. {#tbl-symbols-and-units}
 
----
+```{=typst}
+#pagebreak()
+```
 
 # Annex E. Sources Relied Upon
 
