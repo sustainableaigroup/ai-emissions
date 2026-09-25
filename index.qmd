@@ -24,10 +24,11 @@ format:
 
 ```{=html}
 <div id="saig-pdf-file" hidden>{{< meta report.pdf-file >}}</div>
-<div class="saig-cover" style="background: linear-gradient(135deg, #f5f1e9 0%, #e7f2f2 60%, #f7e6d9 100%);">
+<div class="saig-cover">
   <div class="saig-cover-top">
-    <div class="saig-logo-card"><strong>SUSTAINABLE AI GROUP</strong></div>
-
+    <div class="saig-logo-card">
+      <img src="assets/saig-logo.svg" alt="Sustainable AI Group">
+    </div>
     <div class="saig-kicker">{{< meta report.type >}}</div>
     <h1>{{< meta report.title >}}</h1>
     <div class="saig-expansion">[{{< meta report.expansion >}}]</div>
@@ -35,7 +36,27 @@ format:
 
     <a class="pdf-button saig-pdf-link" href="#" target="_blank" rel="noopener noreferrer">↓ Download PDF</a>
   </div>
-
+  <details class="saig-cite">
+    <summary>Cite this report</summary>
+    <div class="saig-cite-panel">
+      <strong>Suggested citation</strong>
+      <p><em>Closed AI Emissions Calculation: Converting CLEER accelerator energy into greenhouse gas emissions for enterprise use of closed AI models.</em> (2026). Sustainable AI Group. Version CAIEC-0926. <a href="https://reports.sustainableaigroup.com/ai-emissions">https://reports.sustainableaigroup.com/ai-emissions</a></p>
+  
+      <strong>BibTeX</strong>
+      <pre id="saig-bibtex">@techreport{saig2026caiec,
+    title = {Closed AI Emissions Calculation},
+    author = {Gamazaychikov, Boris and Jegham, Nidhal and Luccioni, Sasha},
+    institution = {Sustainable AI Group},
+    year = {2026},
+    number = {CAIEC-0926},
+    url = {https://reports.sustainableaigroup.com/ai-emissions}
+  }</pre>
+      <button type="button" class="saig-cite-copy"
+        onclick="navigator.clipboard.writeText(document.getElementById('saig-bibtex').textContent).then(() => this.textContent = 'Copied')">
+        Copy BibTeX
+      </button>
+    </div>
+  </details>
   <div class="saig-cover-bottom">
     <div class="saig-authors">{{< meta report.authors >}}</div>
 
@@ -62,7 +83,7 @@ format:
 
 #place(top + left, dx: 0.52in, dy: 0.66in)[
   #block(width: 3.48in, fill: white, radius: 11pt, inset: 12pt)[
-    #text(font: "Inter", size: 13pt, weight: "bold", fill: rgb("#033845"))[SUSTAINABLE AI GROUP]
+    #image("assets/saig-logo.svg", width: 2.96in)
   ]
 ]
 
