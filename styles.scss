@@ -313,7 +313,7 @@ table caption,
 .saig-table-scroll table { margin: 0; width: 100%; }
 
 table {
-  font-size: .92rem;
+  font-size: .8rem;
   line-height: 1.45;
   border-collapse: collapse;
 }
@@ -406,7 +406,7 @@ blockquote {
 main.content p { 
   text-align: justify;
   text-justify: inter-word;
-  hyphens: auto;
+  hyphens: none;
   margin-bottom: 1rem; 
 }
 main.content ul, main.content ol { margin-bottom: 1.15rem; }
