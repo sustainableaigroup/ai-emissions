@@ -4,6 +4,7 @@ project:
   resources:
     - report-polish.js
     - assets/SAIGFavicon.svg
+    - assets/pdf-cover-bg.png
 
 bibliography: references.bib
 reference-section-title: References
