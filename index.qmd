@@ -247,7 +247,7 @@ The table below lists the central factors used at each stage of the calculation.
 | Embodied IT intensity, I_emb | 90 gCO₂e/kWh | 145 gCO₂e/kWh | Per kWh of accelerator energy | 7 |
 | Data center construction, k_c | 7 gCO₂e/kWh | 7 gCO₂e/kWh | Per kWh of facility electricity | 8 |
 | Model-development ratio, d | 1.5 | 1.5 | Sector-level proxy | 9 |
-: Adopted factors. Values apply to the central calculation; sensitivities are reported in §11. {#tbl-adopted-factors-values-apply-to-the-central-calculatio}
+: Adopted factors. Values apply to the central calculation; sensitivities are reported in §11. {#tbl-adopted-factors-values-apply-to-the-central-calculatio tbl-colwidths="[28,12,12,40,8]"}
 
 ## 1.5 AI Terms in GHG Accounting Language
 
