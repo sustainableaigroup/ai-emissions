@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+<title id="title">Worked-example emissions breakdown</title><desc id="desc">The 207.5 tonnes carbon dioxide equivalent inventory is 87.4 tonnes inference and 120.1 tonnes model development. The same total is 186.2 tonnes operational emissions, 18.1 tonnes embodied IT, and 3.2 tonnes data center construction.</desc>
+<rect width="1200" height="500" rx="24" fill="#f7f5ef"/>
+<text x="48" y="58" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#033845">Worked example · 207.5 tCO₂e</text>
+<text x="48" y="90" font-family="Arial,sans-serif" font-size="17" fill="#4f747d">Two views of the same inventory total</text>
+<text x="48" y="149" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#033845">By accounting boundary</text>
+<rect x="48" y="172" width="460" height="72" rx="8" fill="#2b6572"/><rect x="508" y="172" width="632" height="72" rx="8" fill="#b8663b"/>
+<text x="72" y="217" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="white">Inference · 87.4</text><text x="530" y="217" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="white">Model development · 120.1</text>
+<text x="48" y="315" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#033845">By emissions source</text>
+<rect x="48" y="338" width="979" height="72" rx="8" fill="#2b6572"/><rect x="1027" y="338" width="95" height="72" fill="#b8663b"/><rect x="1122" y="338" width="18" height="72" fill="#c9b988"/>
+<text x="72" y="383" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="white">Operation · 186.2</text>
+<text x="927" y="448" font-family="Arial,sans-serif" font-size="16" fill="#033845">Embodied IT · 18.1</text><text x="927" y="472" font-family="Arial,sans-serif" font-size="16" fill="#6b6656">Construction · 3.2</text>
+<path d="M1075 411v20h-144" fill="none" stroke="#b8663b" stroke-width="2"/><path d="M1131 411v45h-184" fill="none" stroke="#8b875c" stroke-width="2"/>
+<text x="48" y="466" font-family="Arial,sans-serif" font-size="15" fill="#4f747d">Development is allocated across the source categories above; the rows should not be added together.</text>
+</svg>

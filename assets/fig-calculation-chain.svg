@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+<title id="title">Calculation chain</title><desc id="desc">Customer tokens multiplied by CLEER energy per token yield accelerator energy. Host, idle, power usage effectiveness and development factors yield facility energy. Electricity intensity, embodied IT intensity and construction intensity yield the reported inventory emissions.</desc>
+<rect width="1200" height="500" rx="24" fill="#f7f5ef"/>
+<text x="48" y="57" font-family="Arial,sans-serif" font-weight="700" font-size="30" fill="#033845">From activity to reported emissions</text>
+<text x="48" y="89" font-family="Arial,sans-serif" font-size="17" fill="#4f747d">A traceable chain from customer data to the corporate inventory</text>
+<g font-family="Arial,sans-serif" font-size="20" text-anchor="middle">
+<rect x="48" y="139" width="225" height="115" rx="16" fill="#e3eff0" stroke="#2b6572" stroke-width="2"/>
+<text x="160" y="181" font-weight="700" fill="#033845">Customer activity</text><text x="160" y="214" font-size="16" fill="#36545b">input · cached · output tokens</text>
+<rect x="341" y="139" width="225" height="115" rx="16" fill="#f4e4d7" stroke="#b8663b" stroke-width="2"/>
+<text x="453" y="181" font-weight="700" fill="#033845">CLEER intensity</text><text x="453" y="214" font-size="16" fill="#36545b">Wh per token, by model</text>
+<rect x="634" y="139" width="225" height="115" rx="16" fill="#e3eff0" stroke="#2b6572" stroke-width="2"/>
+<text x="746" y="181" font-weight="700" fill="#033845">Accelerator energy</text><text x="746" y="214" font-size="16" fill="#36545b">serving + development</text>
+<rect x="927" y="139" width="225" height="115" rx="16" fill="#e8e4d5" stroke="#8b875c" stroke-width="2"/>
+<text x="1039" y="181" font-weight="700" fill="#033845">Facility energy</text><text x="1039" y="214" font-size="16" fill="#36545b">host · idle · PUE</text>
+</g>
+<g fill="none" stroke="#b8663b" stroke-width="4" stroke-linecap="round"><path d="M280 195h46"/><path d="M573 195h46"/><path d="M866 195h46"/></g>
+<g fill="#b8663b"><path d="M327 195l-11-8v16z"/><path d="M620 195l-11-8v16z"/><path d="M913 195l-11-8v16z"/></g>
+<path d="M1039 266v41H160v33" fill="none" stroke="#b8663b" stroke-width="4"/>
+<path d="M160 346l-8-12h16z" fill="#b8663b"/>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+<rect x="48" y="350" width="280" height="100" rx="16" fill="#e3eff0" stroke="#2b6572" stroke-width="2"/>
+<text x="188" y="389" font-size="20" font-weight="700" fill="#033845">Operational emissions</text><text x="188" y="421" font-size="16" fill="#36545b">facility energy × grid intensity</text>
+<rect x="399" y="350" width="280" height="100" rx="16" fill="#e3eff0" stroke="#2b6572" stroke-width="2"/>
+<text x="539" y="389" font-size="20" font-weight="700" fill="#033845">Embodied IT</text><text x="539" y="421" font-size="16" fill="#36545b">accelerator energy × IT intensity</text>
+<rect x="750" y="350" width="280" height="100" rx="16" fill="#e3eff0" stroke="#2b6572" stroke-width="2"/>
+<text x="890" y="389" font-size="20" font-weight="700" fill="#033845">Construction</text><text x="890" y="421" font-size="16" fill="#36545b">facility energy × construction</text>
+</g>
+<text x="1055" y="407" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#b8663b">= Inventory</text>
+</svg>
