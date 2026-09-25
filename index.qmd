@@ -95,7 +95,7 @@ format:
 ]
 
 #place(top + left, dx: 0.58in, dy: 3.03in)[
-  #text(font: "Inter", size: 35pt, weight: "medium", fill: rgb("#B8663B"))[{{< meta report.title >}}]
+  #text(font: "Inter", size: 35pt, weight: "medium", fill: rgb("#033845"))[{{< meta report.title >}}]
 ]
 
 #place(top + left, dx: 0.58in, dy: 5.00in)[
