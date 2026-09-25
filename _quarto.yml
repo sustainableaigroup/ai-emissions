@@ -20,7 +20,7 @@ format:
     toc: true
     toc-location: left
     toc-title: Contents
-    toc-depth: 1
+    toc-depth: 2
     smooth-scroll: true
     citations-hover: true
     footnotes-hover: true
