@@ -29,8 +29,8 @@ format:
       <img src="assets/saig-logo.png" alt="Sustainable AI Group">
     </div>
     <h1>{{< meta report.title >}}</h1>
-    <div class="saig-kicker">{{< meta report.type >}}</div>
     <div class="subtitle">{{< meta report.subtitle >}}</div>
+    <div class="saig-kicker">{{< meta report.type >}}</div>
 
     <a class="pdf-button saig-pdf-link" href="#" target="_blank" rel="noopener noreferrer">↓ Download PDF</a>
   </div>
@@ -90,7 +90,7 @@ format:
   ]
 ]
 
-#place(top + left, dx: 0.58in, dy: 4.18in)[
+#place(top + left, dx: 0.58in, dy: 4.8in)[
   #text(font: "DM Mono", size: 14pt, tracking: 0.8pt, fill: rgb("#242424"))[{{< meta report.type >}}]
 ]
 
@@ -98,10 +98,10 @@ format:
   #text(font: "Inter", size: 35pt, weight: "medium", fill: rgb("#033845"))[{{< meta report.title >}}]
 ]
 
-#place(top + left, dx: 0.58in, dy: 5.00in)[
+#place(top + left, dx: 0.58in, dy: 3.8in)[
   #block(width: 6.90in)[
     #set par(leading: 0.72em)
-    #text(font: "Source Serif 4", size: 21pt, fill: rgb("#242424"))[
+    #text(font: "Source Serif 4", size: 18pt, fill: rgb("#242424"))[
       {{< meta report.subtitle >}}
     ]
   ]
