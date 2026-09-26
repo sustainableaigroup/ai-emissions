@@ -93,19 +93,14 @@ format:
 #place(top + left, dx: 0.58in, dy: 3.00in)[
   #block(width: 7.30in)[
     #set par(leading: 0.25em)
-    #text(font: "Inter", size: 46pt, weight: "regular",
-          hyphenate: false, fill: rgb("#242424"))[
+    #text(font: "Inter", size: 46pt, weight: "medium",
+          hyphenate: false, fill: rgb("#2B6572"))[
       {{< meta report.title >}}
     ]
   ]
 ]
 
 #place(top + left, dx: 0.58in, dy: 4.85in)[
-  #text(font: "DM Mono", size: 14pt, tracking: 0.8pt,
-        fill: rgb("#242424"))[{{< meta report.type >}}]
-]
-
-#place(top + left, dx: 0.58in, dy: 5.42in)[
   #block(width: 6.90in)[
     #set par(leading: 0.35em)
     #text(font: "Source Serif 4", size: 24pt,
@@ -115,9 +110,14 @@ format:
   ]
 ]
 
+#place(top + left, dx: 0.58in, dy: 5.85in)[
+  #text(font: "DM Mono", size: 14pt, tracking: 0.8pt,
+        fill: rgb("#242424"))[{{< meta report.type >}}]
+]
+
 #place(top + left, dx: 0.58in, dy: 8.35in)[
   #block(width: 6.90in)[
-    #text(font: "Source Serif 4", size: 18pt,
+    #text(font: "Source Serif 4", size: 15pt,
           hyphenate: false, fill: rgb("#242424"))[
       {{< meta report.authors >}}
     ]
