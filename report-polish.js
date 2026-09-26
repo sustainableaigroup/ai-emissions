@@ -190,7 +190,6 @@
   const init = () => {
     wirePdfLinks();
     addResources();
-    addEyebrows();
     brandCaptions();
     wrapTables();
   };
