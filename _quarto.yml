@@ -21,7 +21,7 @@ format:
     toc: true
     toc-location: left
     toc-title: Contents
-    toc-depth: 2
+    toc-depth: 1
     smooth-scroll: true
     citations-hover: true
     footnotes-hover: true
