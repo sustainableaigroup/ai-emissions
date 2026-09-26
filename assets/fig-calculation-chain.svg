@@ -9,6 +9,8 @@
       .card-title{font-family:Inter,Arial,sans-serif;font-weight:500;fill:#033845}
       .small{font-family:'DM Sans',Arial,sans-serif;fill:#4F747D}
       .white{font-family:Inter,Arial,sans-serif;font-weight:500;fill:#FFFFFF}
+      .math{font-family:'STIX Two Math','Cambria Math','Times New Roman',serif;font-style:italic;fill:#033845}
+      .math-white{font-family:'STIX Two Math','Cambria Math','Times New Roman',serif;font-style:italic;fill:#FFFFFF}
     </style>
   </defs>
   <rect width="1200" height="690" rx="22" fill="#F5F1E9"/>
@@ -32,36 +34,36 @@
   <rect x="802" y="139" width="358" height="103" rx="13" fill="#E6ECED"/>
   <rect x="802" y="139" width="358" height="5" rx="2.5" fill="#55BAC0"/>
   <text x="821" y="181" class="card-title" font-size="21">Serving accelerator energy</text>
-  <text x="821" y="213" class="mono" font-size="16">E_acc</text>
+  <text x="821" y="215" class="math" font-size="23">E<tspan baseline-shift="sub" font-size="65%">acc</tspan></text>
 
   <text x="40" y="280" class="mono" font-size="13">02  ADD ALLOCATED MODEL DEVELOPMENT; APPLY FACILITY FACTORS SEPARATELY</text>
   <rect x="40" y="297" width="526" height="126" rx="13" fill="#E6ECED"/>
   <text x="59" y="327" class="mono" font-size="13">SERVING BRANCH</text>
-  <text x="59" y="363" class="card-title" font-size="22">E_acc × host × idle × PUE</text>
-  <text x="59" y="394" class="small" font-size="16">Idle capacity applies to serving only.</text>
+  <text x="59" y="363" class="math" font-size="27">E<tspan baseline-shift="sub" font-size="65%">acc</tspan> × h × i × p</text>
+  <text x="59" y="394" class="small" font-size="16">Host, idle capacity and PUE; idle is serving only.</text>
 
   <text x="600" y="373" text-anchor="middle" class="heading" font-size="43">+</text>
 
   <rect x="634" y="297" width="526" height="126" rx="13" fill="#F5E7D2"/>
   <text x="653" y="327" class="mono" font-size="13">DEVELOPMENT ACCELERATOR ENERGY</text>
-  <text x="653" y="363" class="card-title" font-size="22">E_dev = d × E_acc</text>
-  <text x="653" y="394" class="small" font-size="16">Development facility energy: E_dev × host × PUE</text>
+  <text x="653" y="363" class="math" font-size="27">E<tspan baseline-shift="sub" font-size="65%">dev</tspan> = d × E<tspan baseline-shift="sub" font-size="65%">acc</tspan></text>
+  <text x="653" y="394" class="small" font-size="16">Host and PUE apply; no serving-idle uplift.</text>
 
   <rect x="40" y="444" width="1120" height="56" rx="11" fill="#2B6572"/>
-  <text x="60" y="480" class="white" font-size="22">E_fac  =  E_acc × host × idle × PUE  +  E_dev × host × PUE</text>
+  <text x="60" y="480" class="math-white" font-size="28">E<tspan baseline-shift="sub" font-size="65%">fac</tspan> = E<tspan baseline-shift="sub" font-size="65%">acc</tspan> × h × i × p + E<tspan baseline-shift="sub" font-size="65%">dev</tspan> × h × p</text>
 
   <text x="40" y="539" class="mono" font-size="13">03  ADD THREE EMISSIONS SOURCES</text>
   <rect x="40" y="554" width="335" height="74" rx="12" fill="#FFFFFF" stroke="#C8D7DA" stroke-width="1.4"/>
   <text x="59" y="583" class="card-title" font-size="19">Operational</text>
-  <text x="59" y="609" class="small" font-size="15">Facility × grid intensity</text>
+  <text x="59" y="610" class="math" font-size="21">E<tspan baseline-shift="sub" font-size="65%">fac</tspan> × CI</text>
   <text x="404" y="603" text-anchor="middle" class="heading" font-size="36">+</text>
   <rect x="433" y="554" width="334" height="74" rx="12" fill="#FFFFFF" stroke="#E2C2AC" stroke-width="1.4"/>
   <text x="452" y="583" class="card-title" font-size="19">Data center construction</text>
-  <text x="452" y="609" class="small" font-size="15">Facility × construction intensity</text>
+  <text x="452" y="610" class="math" font-size="21">E<tspan baseline-shift="sub" font-size="65%">fac</tspan> × k<tspan baseline-shift="sub" font-size="65%">c</tspan></text>
   <text x="796" y="603" text-anchor="middle" class="heading" font-size="36">+</text>
   <rect x="825" y="554" width="335" height="74" rx="12" fill="#FFFFFF" stroke="#C8D7DA" stroke-width="1.4"/>
   <text x="844" y="583" class="card-title" font-size="19">Embodied IT</text>
-  <text x="844" y="609" class="small" font-size="15">(E_acc + E_dev) × embodied intensity</text>
+  <text x="844" y="610" class="math" font-size="21">(E<tspan baseline-shift="sub" font-size="65%">acc</tspan> + E<tspan baseline-shift="sub" font-size="65%">dev</tspan>) × I<tspan baseline-shift="sub" font-size="65%">emb</tspan></text>
 
   <text x="40" y="663" class="heading" font-size="22">=  Reported inventory emissions</text>
   <text x="1160" y="663" text-anchor="end" class="mono" font-size="15">tCO₂e</text>
