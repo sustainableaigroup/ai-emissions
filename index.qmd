@@ -274,7 +274,9 @@ The calculation draws on published evidence assessed against primary sources (An
 
 Where independent evidence converges, the calculation adopts the convergent value and records the supporting sources. Where credible evidence diverges, it documents the range, selects a value with a stated rationale and carries the unresolved difference into the uncertainty treatment in §11 where material. Where adequate published evidence is unavailable, direct measurement is used where feasible. Remaining gaps are treated as assumptions, proxies or limitations and disclosed accordingly.
 
----
+```{=typst}
+#pagebreak()
+```
 
 # 2. Scope and Boundary
 
@@ -322,7 +324,6 @@ A source may be excluded on materiality only where its contribution is estimated
 The quantified exclusions sum to approximately 0.71% of operational serving emissions on a location-based basis and 0.92% on a market-based basis. Both remain below the 1% aggregate cut-off. Data center construction (§8) and hardware distribution (§7.2) exceed the source-level threshold and are included.
 :::
 
----
 
 # 3. Activity Data and Model Coverage
 
@@ -366,7 +367,6 @@ The calculation targets named-model coverage of at least 99.9% of token volume i
 
 Residual activity that cannot be matched to a named CLEER factor is assigned the highest-intensity CLEER-covered model within the same provider and tier, or, where provider or tier is unknown, the highest-intensity model in the current CLEER factor set. The fallback is a conservative bound for a small residual share, not an estimate of the unmatched model. Named-model coverage is disclosed for each reporting period.
 
----
 
 # 4. Accelerator Energy
 
@@ -400,7 +400,6 @@ Google does not make TPU power telemetry available through an equivalent of NVID
 
 Reasoning levels of the same model are not treated as separate models \- reasoning level changes the amount of generation permitted rather than the per-token energy intensity of a distinct model, so additional reasoning increases emissions through the output token count, `Tₒᵤₜ`, rather than through a separate `ēₒᵤₜ`. Where provider telemetry already includes reasoning tokens within completion tokens, no additional reasoning multiplier is applied.
 
----
 
 # 5. Facility Energy
 
@@ -481,7 +480,7 @@ The value of 1.45 is a proxy, not a measurement of the serving facility[^2]. Doc
 | PUE | ×1.45 | Default proxy |
 | **Combined GPU serving uplift** | **×2.39** | Calculated |
 | **Combined TPU serving uplift** | **×2.28** | Calculated |
-: Adopted factors for converting accelerator energy to facility energy. {#tbl-adopted-factors-for-converting-accelerator-energy-to-f tbl-colwidths="[40,4,56]"}
+: Adopted factors for converting accelerator energy to facility energy. {#tbl-adopted-factors-for-converting-accelerator-energy-to-f tbl-colwidths="[35,9,56]"}
 
 With Google's own measured PUE, the TPU chain reproduces Google's reported boundary uplift within rounding:
 
@@ -497,7 +496,6 @@ The adopted host, idle-capacity and PUE factors expand accelerator energy to fac
 
 Where serving hardware does not map to the GPU or TPU classes, the GPU token chain is not applied automatically. The energy of the vendor's billing unit is estimated from hardware-specific evidence, with accelerator inference, sandbox compute, orchestration and storage each assigned factors appropriate to their own hardware boundaries. The estimate is triangulated against a second method based on different evidence such as capacity occupancy, task-level measurements or billing economics. Right-skewed inputs use the percentile treatment in §11.1, and the record identifies the dominant unmeasured input and the provider disclosure that would replace it. A published overhead measurement that covers processor telemetry only is treated as a lower bound for full host overhead.
 
----
 
 # 6. Electricity Carbon Intensity
 
@@ -551,7 +549,7 @@ The factor is blended across the technology mix of binding behind-the-meter gene
 | Solid oxide fuel cells | 54% | 0.49 | 5.1% |
 | Other or undisclosed | Fleet average | 0.64 | 1.3% |
 | **Fleet blended** | **—** | **0.64** | **100.0%** |
-: Behind-the-meter technology mix and emission factors. {#tbl-behind-the-meter-technology-mix-and-emission-factors tbl-colwidths="[60,10,15,15]"}
+: Behind-the-meter technology mix and emission factors. {#tbl-behind-the-meter-technology-mix-and-emission-factors tbl-colwidths="[30,25,30,15]"}
 
 The same method applied to a combustion turbine at 33% HHV efficiency yields 0.73 kgCO₂e/kWh at 2.3% leakage, consistent with the leakage-adjusted harmonized estimate. The difference between the two factors reflects the higher-efficiency combined-cycle and fuel cell capacity in the current behind-the-meter mix.
 
@@ -1063,7 +1061,7 @@ The detailed comparisons below retain the dimensions and boundary differences be
 | Model development | Included; allocated by output share and reported separately as the inventory–inference difference | Included |
 | Grid basis | Location-based primary; market-based reported alongside | — |
 | Uncertainty | Statistical and systematic tracks; single central result | Tiered by data quality |
-: Alignment with Watershed AI emissions framework. {#tbl-framework-watershed}
+: Alignment with Watershed AI emissions framework. {#tbl-framework-watershed tbl-colwidths="[20,40,40]"}
 
 Sources: [@ghgp_scope3; @ghgp_ict; @itu2026l1801; @gsf2025sciai; @watershed2026ai]. "—" indicates the dimension is not specified in the published framework summary.
 
