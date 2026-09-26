@@ -7,7 +7,7 @@ project:
     - assets/pdf-cover-bg.png
 
 bibliography: references.bib
-reference-section-title: References
+reference-section-title: Bibliography
 
 execute:
   freeze: auto
