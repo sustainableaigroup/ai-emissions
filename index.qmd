@@ -90,18 +90,18 @@ format:
   ]
 ]
 
-#place(top + left, dx: 0.58in, dy: 4.8in)[
+#place(top + left, dx: 0.58in, dy: 5.2in)[
   #text(font: "DM Mono", size: 14pt, tracking: 0.8pt, fill: rgb("#242424"))[{{< meta report.type >}}]
 ]
 
 #place(top + left, dx: 0.58in, dy: 3.03in)[
-  #text(font: "Inter", size: 35pt, weight: "medium", fill: rgb("#033845"))[{{< meta report.title >}}]
+  #text(font: "Inter", size: 50pt, weight: "regular", fill: rgb("#242424"))[{{< meta report.title >}}]
 ]
 
-#place(top + left, dx: 0.58in, dy: 3.8in)[
+#place(top + left, dx: 0.58in, dy: 4in)[
   #block(width: 6.90in)[
     #set par(leading: 0.72em)
-    #text(font: "Source Serif 4", size: 18pt, fill: rgb("#242424"))[
+    #text(font: "Source Serif 4", size: 24pt, fill: rgb("#242424"))[
       {{< meta report.subtitle >}}
     ]
   ]
@@ -110,7 +110,7 @@ format:
 #place(top + left, dx: 0.58in, dy: 8.35in)[
   #block(width: 6.90in)[
     #set par(leading: 0.72em)
-    #text(font: "Source Serif 4", size: 15pt, fill: rgb("#242424"))[
+    #text(font: "Source Serif 4", size: 18pt, fill: rgb("#242424"))[
       {{< meta report.authors >}}
     ]
   ]
@@ -1098,10 +1098,6 @@ Energy is expressed in kWh, emissions in kgCO₂e and power in W unless otherwis
 | P̄_acc | Average accelerator power over installed life | 7.3 |
 | I_emb | Embodied intensity, kgCO₂e/kWh of accelerator energy | 7, 10 |
 : Symbols and units. {#tbl-symbols-and-units tbl-colwidths="[20,70,10]"}
-
-```{=typst}
-#pagebreak()
-```
 
 # Annex E. Sources Relied Upon
 
