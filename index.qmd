@@ -3,7 +3,7 @@ pagetitle: "Closed AI Emissions Calculation"
 
 # TEMPLATE: update only this block for each new report.
 report:
-  type: "Companion to the CLEER Technical Report"
+  type: "COMPANION TO CLEER TECHNICAL REPORT"
   title: "Closed AI Emissions Calculation"
   subtitle: "Converting CLEER accelerator energy into greenhouse gas emissions for enterprise use of closed AI models"
   authors: "By Boris Gamazaychikov, Nidhal Jegham, and Sasha Luccioni"
@@ -149,14 +149,14 @@ format:
 
 #pagebreak()
 
-#show heading.where(level: 1): it => block(above: 12pt, below: 14pt)[
-  #text(font: "Inter", size: 21pt, weight: "medium", fill: rgb("#B8663B"))[#it.body]
+#show heading.where(level: 1): it => block(above: 16pt, below: 10pt)[
+  #text(font: "Inter", size: 21pt, weight: "regular", hyphenate: false, fill: rgb("#B8663B"))[#it.body]
 ]
-#show heading.where(level: 2): it => block(above: 13pt, below: 8pt)[
-  #text(font: "Inter", size: 15pt, weight: "medium", fill: rgb("#2B6572"))[#it.body]
+#show heading.where(level: 2): it => block(above: 13pt, below: 10pt)[
+  #text(font: "Inter", size: 15pt, weight: "medium", hyphenate: false, fill: rgb("#2B6572"))[#it.body]
 ]
-#show heading.where(level: 3): it => block(above: 10pt, below: 5pt)[
-  #text(font: "Inter", size: 11.5pt, weight: "medium", fill: rgb("#2B6572"))[#it.body]
+#show heading.where(level: 3): it => block(above: 13pt, below: 10pt)[
+  #text(font: "Inter", size: 11.5pt, weight: "bold", hyphenate: false, fill: rgb("#DD784F"))[#it.body]
 ]
 
 #show image: it => block(
