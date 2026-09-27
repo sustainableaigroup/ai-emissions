@@ -3,8 +3,8 @@
 
 (() => {
   const links = {
-    dashboardUrl: "#",
-    githubUrl: "https://github.com/sustainableaigroup/CLEER-Tech-Report/issues",
+    dashboardUrl: "cleerdash.sustainableaigroup.com",
+    githubUrl: "https://github.com/sustainableaigroup/CLEER",
     contactUrl: "https://sustainableaigroup.com/#contact"
   };
 
