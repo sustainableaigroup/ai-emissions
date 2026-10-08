@@ -37,7 +37,7 @@
     block.innerHTML = `
       <div class="saig-resource-title">Resources</div>
 
-      <a
+            <a
         class="saig-resource-link saig-resource-primary"
         href="${currentPdf()}"
         target="_blank"
@@ -55,11 +55,20 @@
         <span aria-hidden="true">↗</span> Feedback
       </a>
 
-      <a
+            <a
         class="saig-resource-link"
         href="${links.dashboardUrl}"
       >
         <span aria-hidden="true">↗</span> Dashboard
+      </a>
+
+      <a
+        class="saig-resource-link"
+        href="https://reports.sustainableaigroup.com/CLEER-Tech-Report/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span aria-hidden="true">↗</span> Companion Report
       </a>
 
       <a
