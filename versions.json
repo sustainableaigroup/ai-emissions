@@ -1,0 +1,18 @@
+{
+  "report": "Closed AI Emissions Calculation",
+  "series": "CAIEC",
+  "latest": "0926",
+  "concept_doi": "10.5281/zenodo.24438874",
+  "versions": [
+    {
+      "code": "0926",
+      "id": "CAIEC-0926",
+      "date": "2026-09-29",
+      "url": "/ai-emissions/0926/",
+      "pdf": "/ai-emissions/0926/CAIEC-0926.pdf",
+      "doi": "10.5281/zenodo.24438875",
+      "changelog": null,
+      "cleer_factor_release": "0926"
+    }
+  ]
+}

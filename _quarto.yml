@@ -1,8 +1,12 @@
 project:
   type: default
   output-dir: docs
+  render:
+    - index.qmd
   resources:
     - report-polish.js
+    - version-banner.js
+    - versions.json
     - assets/SAIGFavicon.svg
     - assets/pdf-cover-bg.png
 

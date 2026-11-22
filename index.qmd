@@ -10,6 +10,7 @@ report:
   version: "CAIEC-0926"
   date: "29 SEPTEMBER 2026"
   pdf-file: "CAIEC-0926.pdf"
+  permalink: "https://reports.sustainableaigroup.com/ai-emissions/0926/"
 
 bibliography: references.bib
 lightbox: true
@@ -41,7 +42,7 @@ format:
       <p>Gamazaychikov, B., Jegham, N., &amp; Luccioni, S. (2026).
         <em>Closed AI Emissions Calculation: Converting CLEER accelerator energy into greenhouse gas emissions for enterprise use of closed AI models.</em>
         Sustainable AI Group. Version CAIEC-0926.
-        <a href="https://reports.sustainableaigroup.com/ai-emissions">https://reports.sustainableaigroup.com/ai-emissions</a>
+        <a href="{{< meta report.permalink >}}">{{< meta report.permalink >}}</a>
       </p>
   
       <strong>BibTeX</strong>
@@ -52,7 +53,7 @@ format:
     year         = {2026},
     month        = sep,
     note         = {Version CAIEC-0926},
-    url          = {https://reports.sustainableaigroup.com/ai-emissions}
+    url          = &#123;{{< meta report.permalink >}}&#125;
   }</pre>
       <button type="button" class="saig-cite-copy"
         onclick="navigator.clipboard.writeText(document.getElementById('saig-bibtex').textContent).then(() => this.textContent = 'Copied')">

@@ -23,11 +23,45 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v7
 
+      # Pinned so that a rebuild of the same source gives the same output.
+      # Change deliberately, at a release, and note it in the changelog.
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.10.19
 
-      - name: Render report
+      - name: Verify archived versions are unchanged
+        run: |
+          set -euo pipefail
+          for d in archive/*/; do
+            echo "Checking ${d}"
+            (cd "$d" && sha256sum --check --quiet SHA256SUMS)
+          done
+
+      - name: Render current version
         run: quarto render
+
+      # Site layout:
+      #   /ai-emissions/          latest version (rendered from index.qmd)
+      #   /ai-emissions/<code>/   every version, frozen once superseded
+      #   /ai-emissions/versions.json, version-banner.js
+      - name: Assemble versioned site
+        run: |
+          set -euo pipefail
+          rm -rf docs/archive
+          latest=$(jq -r '.latest' versions.json)
+          cp -R docs "${RUNNER_TEMP}/current"
+          for d in archive/*/; do
+            v=$(basename "$d")
+            cp -R "$d" "docs/${v}"
+          done
+          # Until the latest version is frozen into archive/, serve the
+          # current render at its permanent URL as well.
+          if [ ! -d "docs/${latest}" ]; then
+            cp -R "${RUNNER_TEMP}/current" "docs/${latest}"
+          fi
+          echo "Latest: ${latest}"
+          ls docs
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
