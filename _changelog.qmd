@@ -1,0 +1,39 @@
+<!--
+Annex F is the authoritative change record for this report (see VERSIONING.md).
+Change IDs: CMMYY-NN. Types: Method, Data, Clarification, Editorial.
+Method and Data changes also get a ::: {.change} block where they occur in the text.
+Effect on results: % change in total kgCO2e on the reference inventory (F.4),
+for each change on its own, plus the combined effect of the release.
+-->
+
+## F.1 Compatibility With CLEER Factor Releases {#f.1-compatibility-with-cleer-factor-releases}
+
+Each version of this calculation is designed for a specific release of CLEER per-token accelerator energy factors.
+
+| Calculation version | Published | CLEER factor release | Status |
+|---|---|---|---|
+| CAIEC-1226 | December 2026 | 1226 | Latest |
+| CAIEC-0926 | 29 September 2026 | 0926 | Superseded |
+: Calculation versions and the CLEER factor releases they apply to. {#tbl-version-compatibility tbl-colwidths="[25,25,25,25]"}
+
+## F.2 Changes in CAIEC-1226 {#f.2-changes-in-caiec-1226}
+
+Changes from CAIEC-0926. The combined effect of this release on the reference inventory (F.4) is [X]% in total kgCO₂e.
+
+| ID | Section | Type | Trigger | Change | Effect on results |
+|---|---|---|---|---|---|
+| C1226-01 | §[x.x] | [Method / Data / Clarification / Editorial] | [Review, disclosure or study] | [Before → after] | [±X% / none] |
+: Changes in CAIEC-1226. {#tbl-changes-1226 tbl-colwidths="[10,10,12,18,30,20]"}
+
+A line-by-line comparison of the two versions is available at <https://github.com/sustainableaigroup/ai-emissions/compare/CAIEC-0926...CAIEC-1226>.
+
+## F.3 Earlier Versions {#f.3-earlier-versions}
+
+| Version | Published | Summary | Permanent URL |
+|---|---|---|---|
+| CAIEC-0926 | 29 September 2026 | Initial public release | <https://reports.sustainableaigroup.com/ai-emissions/0926/> |
+: Earlier versions of this report. {#tbl-earlier-versions tbl-colwidths="[15,20,25,40]"}
+
+## F.4 Reference Inventory {#f.4-reference-inventory}
+
+[Define the fixed reference inventory used to report the effect of each change: models, workload mix, token volumes and grid factor. Keep it unchanged across releases so that effects are comparable.]

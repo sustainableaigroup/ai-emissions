@@ -11,6 +11,9 @@ project:
     - assets/pdf-cover-bg.png
 
 bibliography: references.bib
+
+filters:
+  - filters/change-badge.lua
 reference-section-title: Bibliography
 
 execute:

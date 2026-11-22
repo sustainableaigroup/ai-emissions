@@ -541,3 +541,43 @@ main.content hr { border-color: var(--saig-mist); margin: 3rem 0; }
   color: #fff;
   font: 500 .75rem "DM Mono", monospace;
 }
+
+/* "Changed in <version>" badges from filters/change-badge.lua (see VERSIONING.md) */
+.saig-change {
+  margin: 1rem 0 1.4rem;
+  border-left: 2px solid var(--saig-orange, #B8663B);
+  background: #F5F1E9;
+  border-radius: 0 10px 10px 0;
+  padding: .55rem .9rem;
+}
+.saig-change summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem;
+  font-family: "DM Mono", monospace;
+  font-size: .72rem;
+  letter-spacing: .04em;
+}
+.saig-change summary::-webkit-details-marker { display: none; }
+.saig-change-pill {
+  background: #B8663B;
+  color: #fff;
+  border-radius: 999px;
+  padding: .12rem .6rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.saig-change-meta { color: #4F747D; }
+.saig-change summary::after { content: "▾"; color: #4F747D; }
+.saig-change details[open] summary::after { content: "▴"; }
+.saig-change-body { margin-top: .6rem; font-size: .95rem; }
+.saig-change-body > p:last-of-type { margin-bottom: .4rem; }
+.saig-change-prev {
+  font-family: "DM Mono", monospace;
+  font-size: .72rem;
+  text-decoration: none !important;
+}
+@media print { .saig-change details { display: block; } }
