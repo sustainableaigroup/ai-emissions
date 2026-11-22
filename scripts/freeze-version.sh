@@ -1,19 +1,24 @@
 #!/usr/bin/env bash
 # Freeze a released version of the report into archive/<code>/.
 #
-# Usage:  scripts/freeze-version.sh <code> [path/to/release.pdf]
-#   e.g.  scripts/freeze-version.sh 1226
+# Usage:  scripts/freeze-version.sh <code> <path/to/published.pdf> [git-ref]
+#   e.g.  scripts/freeze-version.sh 1226 ~/Downloads/CAIEC-1226.pdf
 #
-# Renders the source at tag CAIEC-<code> with the pinned Quarto version,
-# copies the output to archive/<code>/, uses the PDF attached to the GitHub
-# release (or the path given) instead of a local re-render, makes sure the
-# version-banner script is loaded, and writes SHA256SUMS. Commit the result
-# through a pull request. Never edit an archive by hand afterwards.
+# Run on main right after the release PR is merged and deployed, before the
+# GitHub Release is published, so the release (and its Zenodo deposit)
+# includes the frozen pages and PDF.
+#
+# Renders the source at <git-ref> (default: HEAD) with the pinned Quarto
+# version, copies the output to archive/<code>/, uses the PDF downloaded from
+# the live site instead of a local re-render (local fonts can differ), makes
+# sure the version-banner script is loaded, and writes SHA256SUMS. Commit the
+# result through a pull request. Never edit an archive by hand afterwards.
 
 set -euo pipefail
 
-code="${1:?usage: scripts/freeze-version.sh <code> [release.pdf]}"
-pdf_override="${2:-}"
+code="${1:?usage: scripts/freeze-version.sh <code> <published.pdf> [git-ref]}"
+pdf="${2:?usage: scripts/freeze-version.sh <code> <published.pdf> [git-ref]}"
+ref="${3:-HEAD}"
 tag="CAIEC-${code}"
 quarto_pinned="1.10.19"
 root="$(git rev-parse --show-toplevel)"
@@ -29,13 +34,16 @@ if [ "$(quarto --version)" != "${quarto_pinned}" ]; then
   exit 1
 fi
 
-git -C "${root}" rev-parse --verify --quiet "refs/tags/${tag}" >/dev/null \
-  || git -C "${root}" fetch --quiet origin "refs/tags/${tag}:refs/tags/${tag}"
-
 work="$(mktemp -d)"
 trap 'rm -rf "${work}"' EXIT
 
-git -C "${root}" worktree add --quiet --detach "${work}/src" "${tag}"
+commit="$(git -C "${root}" rev-parse --short "${ref}^{commit}")"
+git -C "${root}" worktree add --quiet --detach "${work}/src" "${commit}"
+
+if ! grep -q "version: \"${tag}\"" "${work}/src/index.qmd"; then
+  echo "index.qmd at ${commit} is not ${tag}; stopping." >&2
+  exit 1
+fi
 (cd "${work}/src" && quarto render >/dev/null)
 
 mkdir -p "${dest}"
@@ -43,14 +51,9 @@ cp -R "${work}/src/docs/." "${dest}/"
 rm -rf "${dest}/archive" "${dest}/versions.json" "${dest}/version-banner.js"
 git -C "${root}" worktree remove --force "${work}/src"
 
-# Replace the locally rendered PDF with the one distributed at release.
+# Replace the locally rendered PDF with the one published on the live site.
 pdf_name="$(basename "$(ls "${dest}"/*.pdf | head -n 1)")"
-if [ -n "${pdf_override}" ]; then
-  cp "${pdf_override}" "${dest}/${pdf_name}"
-else
-  gh release download "${tag}" --pattern "*.pdf" --dir "${work}/pdf"
-  cp "${work}/pdf/"*.pdf "${dest}/${pdf_name}"
-fi
+cp "${pdf}" "${dest}/${pdf_name}"
 
 # Versions from CAIEC-1226 on load the banner script from source; older
 # renders need it added.
@@ -69,10 +72,10 @@ fi
 cat > "${dest}/PROVENANCE.txt" <<EOF
 ${tag} archive: provenance
 
-Source:   git tag ${tag}, commit $(git -C "${root}" rev-parse --short "${tag}^{commit}")
+Source:   commit ${commit} (tagged ${tag} at release)
 Frozen:   $(date -u +%Y-%m-%d)
 HTML:     rendered from the tagged source with Quarto ${quarto_pinned}
-PDF:      the file attached to the GitHub release ${tag}
+PDF:      the file published on the live site at release
 Integrity: SHA256SUMS lists every file in this folder; the deploy workflow
            verifies it on every build.
 EOF

@@ -17,7 +17,7 @@ A correction that changes a number and cannot wait for the next scheduled releas
 
 ## What Never Changes
 
-Once a version is released it is not edited. Archived versions live in `archive/MMYY/`, rendered from the release tag, with a `SHA256SUMS` file that the deploy workflow checks on every build. The build fails if any archived file has changed. `archive/0926/PROVENANCE.txt` records the two edits made when the first version was frozen, before this policy existed.
+Once a version is released it is not edited. Archived versions live in `archive/MMYY/`, rendered from the release commit, with a `SHA256SUMS` file that the deploy workflow checks on every build. The build fails if any archived file has changed. `archive/0926/PROVENANCE.txt` records the two edits made when the first version was frozen, before this policy existed. CAIEC-0926 was also tagged before its archive existed, so its Zenodo deposit contains the source only; from CAIEC-1226 on, the deposit includes the frozen pages and PDF.
 
 `main` deploys to the live site on every push. Release work is done on a `release/MMYY` branch and merged on release day.
 
@@ -54,8 +54,9 @@ Each version records the CLEER factor release it is designed for (`cleer_factor_
 
 1. Create `release/MMYY` from `main`. Make all changes there.
 2. Log every change in `_changelog.qmd` and add `.change` blocks for Method and Data changes. Compute reference-inventory effects.
-3. Update the version block at the top of `index.qmd` (version, date, PDF name, permalink, typst output file) and the citation fields, plus `version` and `publication_date` in `.zenodo.json` and `CITATION.cff`.
-4. Open a pull request into `main`, review the preview, and merge on release day. The new version goes live at `/ai-emissions/` and `/ai-emissions/MMYY/`.
-5. Publish a GitHub Release named `CAIEC-MMYY` on the merge commit, with the PDF downloaded from the live site attached. Zenodo mints the DOI.
-6. Update `versions.json` (new entry with DOI and changelog link, `latest`), add the DOI to the citation block and `CITATION.cff`, and run `scripts/freeze-version.sh MMYY` to freeze the new version into `archive/MMYY/`. Merge through a pull request.
-7. Check that the previous version now shows the superseded banner and that both permanent URLs and PDFs resolve.
+3. Update the version block at the top of `index.qmd` (version, date, PDF name, permalink, citation month, typst output file); `version`, `publication_date` and the `isIdenticalTo` URL in `.zenodo.json`; `version` and dates in `CITATION.cff`; and add the new entry to `versions.json` with `latest` pointing to it (`doi` stays `null` for now).
+4. Open a pull request into `main`, review the preview, and merge on release day. The new version goes live at `/ai-emissions/` and `/ai-emissions/MMYY/`, and the previous version starts showing the superseded banner.
+5. Download the PDF from the live site and run `scripts/freeze-version.sh MMYY path/to/CAIEC-MMYY.pdf` on `main`. Add the version to the table in `README.md`. Merge through a pull request.
+6. Publish a GitHub Release with the tag `CAIEC-MMYY` (check the spelling: it must match the version exactly) on that merge commit, with the PDF attached. The tagged commit then contains the frozen pages and PDF, so the Zenodo deposit does too. Zenodo mints the DOI.
+7. Add the DOI to `versions.json`, `CITATION.cff` and `README.md`. Every page picks it up from `versions.json`; nothing in the archive changes.
+8. Check that both permanent URLs and PDFs resolve, the DOI resolves, and the previous version shows the superseded banner.

@@ -52,6 +52,12 @@
     .saig-version-menu a { white-space: nowrap; }
     .saig-version-menu a:hover, .saig-version-menu a[aria-current="page"] { background: #fff; }
     .saig-version-menu span { color: #4F747D; }
+    .saig-version-doi {
+      display: block; margin-top: .3rem; font-family: "DM Mono", monospace;
+      font-size: .7rem; letter-spacing: .02em; color: #2B6572 !important;
+      text-decoration: none !important;
+    }
+    .saig-version-doi:hover { text-decoration: underline !important; }
     @media print { .saig-version-banner, .saig-version-switch { display: none !important; } }
   `;
 
@@ -117,6 +123,43 @@
     label.parentElement.appendChild(switcher);
   };
 
+  // Add the version's DOI (from versions.json) to the citation panel and the
+  // VERSION card. DOIs are minted after a version is frozen, so they are
+  // supplied here rather than written into archived pages.
+  const addDoi = (current) => {
+    if (!current.doi) return;
+    const url = "https://doi.org/" + current.doi;
+
+    const cite = document.querySelector(".saig-cite-panel p");
+    if (cite && !cite.querySelector(".saig-doi")) {
+      const a = document.createElement("a");
+      a.className = "saig-doi";
+      a.href = url;
+      a.textContent = url;
+      cite.appendChild(document.createTextNode(" "));
+      cite.appendChild(a);
+    }
+
+    const bib = document.getElementById("saig-bibtex");
+    if (bib && !/\bdoi\s*=/.test(bib.textContent)) {
+      bib.textContent = bib.textContent.replace(
+        /(\n\s*url\s*=)/,
+        "\n    doi          = {" + current.doi + "},$1"
+      );
+    }
+
+    const labels = [...document.querySelectorAll(".saig-meta-label")];
+    const label = labels.find((el) => el.textContent.trim().toUpperCase().startsWith("VERSION"));
+    if (label && !label.parentElement.querySelector(".saig-version-doi")) {
+      const d = document.createElement("a");
+      d.className = "saig-version-doi";
+      d.href = url;
+      d.textContent = "DOI " + current.doi;
+      const value = label.parentElement.querySelector(".saig-meta-value");
+      (value || label).insertAdjacentElement("afterend", d);
+    }
+  };
+
   const run = async () => {
     let registry;
     try {
@@ -137,6 +180,7 @@
 
     addBanner(registry, current, latest);
     addSwitcher(registry, current, latest);
+    addDoi(current);
   };
 
   if (document.readyState === "loading") {
