@@ -1,0 +1,28 @@
+CAIEC-0926 archive: provenance
+==============================
+
+Version:    CAIEC-0926 (Closed AI Emissions Calculation)
+Published:  29 September 2026
+Source:     git tag CAIEC-0926, commit d7b8ec7 (report text identical to the
+            last content commit before launch, ed8ca02, 26 September 2026)
+Frozen:     22 November 2026
+
+HTML: rendered from the tagged source with Quarto 1.10.19, the version used for
+the production build. Verified against the live site on 22 November 2026: the
+page HTML, figures, scripts and all other assets match byte for byte, except
+the two compiled Bootstrap theme stylesheets, which contain the same rules in a
+different order (unused theme utility classes; no visible difference) and
+therefore carry different hashed filenames.
+
+Post-freeze edits to index.html (the only changes to the rendered output):
+  1. Citation URL changed from /ai-emissions to /ai-emissions/0926/ so that
+     citations of this version keep resolving to this version.
+  2. One <script> tag loading /ai-emissions/version-banner.js (version switcher
+     and "superseded" notice).
+
+PDF: CAIEC-0926.pdf is the original file distributed at launch (built
+27 September 2026), not a re-render. Its embedded citation still shows the
+/ai-emissions URL as originally published.
+
+Integrity: SHA256SUMS lists every file in this folder. The deploy workflow
+verifies it on every build and fails if any archived file has changed.
