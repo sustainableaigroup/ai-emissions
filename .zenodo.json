@@ -12,7 +12,7 @@
   "keywords": ["AI", "greenhouse gas accounting", "carbon emissions", "energy", "LLM", "CLEER", "Scope 3"],
   "related_identifiers": [
     {"identifier": "https://reports.sustainableaigroup.com/CLEER-Tech-Report/", "relation": "isSupplementTo", "resource_type": "publication-report"},
-    {"identifier": "https://reports.sustainableaigroup.com/ai-emissions/", "relation": "isIdenticalTo", "resource_type": "publication-report"}
+    {"identifier": "https://reports.sustainableaigroup.com/ai-emissions/0926/", "relation": "isIdenticalTo", "resource_type": "publication-report"}
   ],
   "version": "CAIEC-0926",
   "publication_date": "2026-09-29",
