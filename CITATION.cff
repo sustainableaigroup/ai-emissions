@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this methodology, please cite the specific version you applied."
+title: "Closed AI Emissions Calculation"
+authors:
+  - family-names: Gamazaychikov
+    given-names: Boris
+    affiliation: Sustainable AI Group
+  - family-names: Jegham
+    given-names: Nidhal
+    affiliation: Sustainable AI Group
+  - family-names: Luccioni
+    given-names: Sasha
+    affiliation: Sustainable AI Group
+version: CAIEC-0926
+date-released: 2026-09-29
+license: CC-BY-4.0
+url: "https://reports.sustainableaigroup.com/ai-emissions/0926/"
+repository-code: "https://github.com/sustainableaigroup/ai-emissions"
+preferred-citation:
+  type: report
+  title: "Closed AI Emissions Calculation: Converting CLEER accelerator energy into greenhouse gas emissions for enterprise use of closed AI models"
+  authors:
+    - family-names: Gamazaychikov
+      given-names: Boris
+    - family-names: Jegham
+      given-names: Nidhal
+    - family-names: Luccioni
+      given-names: Sasha
+  institution:
+    name: Sustainable AI Group
+  year: 2026
+  month: 9
+  version: CAIEC-0926
+  url: "https://reports.sustainableaigroup.com/ai-emissions/0926/"

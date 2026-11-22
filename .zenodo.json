@@ -1,0 +1,20 @@
+{
+  "title": "Closed AI Emissions Calculation: Converting CLEER accelerator energy into greenhouse gas emissions for enterprise use of closed AI models",
+  "description": "Companion to the CLEER Technical Report. Describes how CLEER accelerator energy estimates for closed AI models are converted into greenhouse gas emissions for enterprise inventories, covering scope and boundary, activity data, facility energy, electricity carbon intensity, embodied hardware carbon, data center construction, model development, uncertainty and alignment with existing frameworks. Interactive version: https://reports.sustainableaigroup.com/ai-emissions/",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "creators": [
+    {"name": "Gamazaychikov, Boris", "affiliation": "Sustainable AI Group"},
+    {"name": "Jegham, Nidhal", "affiliation": "Sustainable AI Group"},
+    {"name": "Luccioni, Sasha", "affiliation": "Sustainable AI Group"}
+  ],
+  "license": "cc-by-4.0",
+  "keywords": ["AI", "greenhouse gas accounting", "carbon emissions", "energy", "LLM", "CLEER", "Scope 3"],
+  "related_identifiers": [
+    {"identifier": "https://reports.sustainableaigroup.com/CLEER-Tech-Report/", "relation": "isSupplementTo", "resource_type": "publication-report"},
+    {"identifier": "https://reports.sustainableaigroup.com/ai-emissions/", "relation": "isIdenticalTo", "resource_type": "publication-report"}
+  ],
+  "version": "CAIEC-0926",
+  "publication_date": "2026-09-29",
+  "language": "eng"
+}
