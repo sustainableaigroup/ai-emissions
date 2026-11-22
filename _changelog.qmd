@@ -29,10 +29,10 @@ A line-by-line comparison of the two versions is available at <https://github.co
 
 ## F.3 Earlier Versions {#f.3-earlier-versions}
 
-| Version | Published | Summary | Permanent URL |
-|---|---|---|---|
-| CAIEC-0926 | 29 September 2026 | Initial public release | <https://reports.sustainableaigroup.com/ai-emissions/0926/> |
-: Earlier versions of this report. {#tbl-earlier-versions tbl-colwidths="[15,20,25,40]"}
+| Version | Published | Summary | Permanent URL | DOI |
+|---|---|---|---|---|
+| CAIEC-0926 | 29 September 2026 | Initial public release | <https://reports.sustainableaigroup.com/ai-emissions/0926/> | [10.5281/zenodo.24438875](https://doi.org/10.5281/zenodo.24438875) |
+: Earlier versions of this report. {#tbl-earlier-versions tbl-colwidths="[13,15,17,32,23]"}
 
 ## F.4 Reference Inventory {#f.4-reference-inventory}
 
